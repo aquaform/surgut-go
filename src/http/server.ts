@@ -15,6 +15,8 @@ import path from 'node:path';
 import type { CacheStore } from '../cache/store';
 import type { EventIndex } from '../pipeline/index-events';
 import healthRoute from './routes/health';
+import eventsRoute from './routes/events';
+import sourcesRoute from './routes/sources';
 
 // ---------------------------------------------------------------------------
 // Type augmentation — typed decorations on FastifyInstance
@@ -54,8 +56,11 @@ export function createServer({ store, index }: ServerDeps): FastifyInstance {
   fastify.decorate('store', store);
   fastify.decorate('index', index);
 
-  // /health must be registered before the static wildcard so exact routes win.
+  // API routes registered before the static wildcard so exact paths always win.
+  // Order: health → events → sources → static (wildcard last).
   fastify.register(healthRoute);
+  fastify.register(eventsRoute);
+  fastify.register(sourcesRoute);
 
   // Serve the public/ directory at the root prefix.
   // __dirname in the esbuild CJS bundle resolves to the output file directory,

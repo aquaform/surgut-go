@@ -1,0 +1,3317 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Мероприятия в Сургуте | Афиша и билеты | Kassa-Ugra.ru</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Узнайте о самых интересных мероприятиях в Сургуте на Kassa-Ugra.ru! Мы предлагаем актуальную афишу с билетами на концерты, театральные постановки, выставки и другие события. Не упустите возможность посетить яркие события города!">
+		<meta name="keywords" content="мероприятия в Сургуте, афиша Сургут, купить билеты на мероприятия, концерты, театры, выставки, культурные события, Kassa-Ugra">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="yandex-verification" content="894b3ac7a5c9f64a" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+		<link rel="image_src" href="/images/logo-share.png">
+		<link rel="stylesheet" href="/assets/icomoon/style.css"/>
+		<link rel="stylesheet" href="/assets/g-ui/g-ui.css"/>
+		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.min.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick-theme.css"/>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+		<link rel="stylesheet" href="/css/main.css"/>
+		<link rel="stylesheet" href="/css/horizontal-calendar.css"/>
+		<script src="https://api-maps.yandex.ru/v3/?apikey=0117b41b-b5df-46aa-80b0-1411cb53cb4b&lang=ru_RU"></script>
+	</head>
+	<body>
+	<div id="main">
+		<header>
+			<div class="hide-767">
+				<nav class="top-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-2 col-md-2">
+									<select name="city" class="g-select city-select" onchange="selectCity(this)">
+											<option  value="342757">Анапа</option>
+											<option  value="299699">Астрахань</option>
+											<option  value="279206">Барнаул</option>
+											<option  value="341476">Верхняя Тура</option>
+											<option  value="28914">Губкинский</option>
+											<option  value="167062">Екатеринбург</option>
+											<option  value="322558">Искитим</option>
+											<option  value="196015">Ишим</option>
+											<option  value="299700">Калининград</option>
+											<option  value="318365">Канск</option>
+											<option  value="167128">Кемерово</option>
+											<option  value="196">Когалым</option>
+											<option  value="167271">Красноярск</option>
+											<option  value="285236">Курган</option>
+											<option  value="282944">Лабытнанги</option>
+											<option  value="28238">Лангепас</option>
+											<option  value="299138">Лесной</option>
+											<option  value="167444">Лянтор</option>
+											<option  value="195989">Мегион</option>
+											<option  value="167152">Москва</option>
+											<option  value="210433">Муравленко</option>
+											<option  value="299703">Мурманск</option>
+											<option  value="211010">Надым</option>
+											<option  value="13">Нефтеюганск</option>
+											<option  value="47">Нижневартовск</option>
+											<option  value="320574">Новосибирск</option>
+											<option  value="5570">Новый-Уренгой</option>
+											<option  value="5573">Ноябрьск</option>
+											<option  value="277401">Пермь</option>
+											<option  value="337273">Покачи</option>
+											<option  value="210983">Радужный</option>
+											<option  value="211005">Салехард</option>
+											<option  value="167065">Санкт-Петербург</option>
+											<option  value="211016">Стрежевой</option>
+											<option  selected  value="3">Сургут</option>
+											<option  value="318370">Тайшет</option>
+											<option  value="166480">Тобольск</option>
+											<option  value="318362">Тулун</option>
+											<option  value="8901">Тюмень</option>
+											<option  value="212715">Урай</option>
+											<option  value="285239">Уфа</option>
+											<option  value="211015">Фёдоровский</option>
+											<option  value="87">Ханты-Мансийск</option>
+											<option  value="299142">Челябинск</option>
+											<option  value="335153">Югорск</option>
+									</select>
+							</div>
+							<div class="col-lg-5 col-md-3 no-padding-left">
+								<div class="search-input">
+									<form class="search" action="/afisha" method="get">
+										<button type="submit" class="search-btn"><i aria-hidden="true" class="icon-search"></i></button>
+										<input type="text" value="" name="_q" placeholder="Поиск по мероприятиям, людям и местам"/>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-7">
+								<div class="d-flex justify-content-lg-end justify-content-md-between">
+									<ul class="d-flex menu top-menu">
+											<li><a href="/venues">Залы</a></li><li><a href="/retail">Кассы</a></li>
+										<li id="cld">
+											<a href="#" class="dashed-link">Календарь событий</a>
+											<div class="dropdown">
+												<div class="box">
+													<div class="title">Календарь событий</div>
+													<div class="calendar">
+														<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+										<a href="tel: +7 (3462) 33-12-44" class="phone icon-phone-display">+7 (3462) 33-12-44</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<nav class="bottom-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-2">
+								<div class="logo"><a href="/"><img src="/images/logo.webp"/></a></div>
+							</div>
+							<div class="col-7 no-padding-left genre-categories">
+								<ul class="menu bottom-menu d-flex">
+									<li>
+										<a href="/afisha/concerts">Концерты</a>
+									</li>
+
+									<li>
+										<a href="/afisha/show">Шоу</a>
+									</li>
+
+									<li>
+										<a href="/afisha/theatre">Театр</a>
+									</li>
+
+									<li>
+										<a href="/afisha/stendup">Стендап</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="main-content">
+			<div class="container">
+	<div class="breadcrumbs">
+		<ul>
+			<a href="/">Главная</a> /
+			<a href="/afisha">Афиша</a>
+		</ul>
+	</div>
+
+
+	<h1>Мероприятия в Сургуте</h1>
+	<div id="afisha">
+
+		<aside>
+			<div id="filter">
+				<div class="form-control afisha_filters">
+					<label for="sort">Сортировка</label>
+					<select id="sort" class="simple-select">
+						<option name="sort" value="0">По дате</option>
+						<option name="sort" value="1">По спросу</option>
+						<option name="sort" value="2">По рейтингу</option>
+					</select>
+				</div>
+				<div class="form-control afisha_filters">
+					<label for="type">Фильтры</label>
+					<select id="type" class="simple-select">
+						<option value="0">Все</option>
+						<option  name="premieres" value="3">Премьеры</option>
+						<option  name="tours" value="4">Гастроли</option>
+					</select>
+				</div>
+			</div>
+			<div class="calendar">
+				<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+			</div>
+		</aside>
+
+		<div id="left-block">
+
+			<div class="events" id="list_content">
+				<h4>
+					27
+					июня,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/347355">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/685/593/activity-list-347346.jpg" alt="Вечеринка в аквапарке">
+					</a>
+					<div class="buy">
+						<a href="/event/347355#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/347355">Вечеринка в аквапарке</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Аквапарк «Аквамарин»</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>27
+										июн
+										23:00
+										Сб</span></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					6
+					сентября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/349507">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/595/251/activity-list-349506.jpg" alt="МакSим">
+					</a>
+					<div class="buy">
+						<a href="/event/349507#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349507">МакSим</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>6
+										сен
+										20:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>5500 - 8800</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					15
+					сентября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/340922">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/596/694/activity-list-232636.jpg" alt="Группа «ПИКНИК» представит новое шоу «Вечное движение»">
+					</a>
+					<div class="buy">
+						<a href="/event/340922#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/340922">Группа «ПИКНИК» представит новое шоу «Вечное движение»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Дворец искусств Нефтяник</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>15
+										сен
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3500 - 12000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					26
+					сентября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/343246">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/911/190/activity-list-343244.jpg" alt="Большой движ">
+					</a>
+					<div class="buy">
+						<a href="/event/343246#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/343246">Большой движ</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Компромат</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>26
+										сен
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>900</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/340457">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/684/803/activity-list-208802.jpg" alt="Спектакль «Мастер и Маргарита»">
+					</a>
+					<div class="buy">
+						<a href="/event/340457#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/340457">Спектакль «Мастер и Маргарита»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>26
+										сен
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2200 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					29
+					сентября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/347069">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/562/595/activity-list-347066.jpg" alt="Хор Сретенского монастыря. Юбилейный концерт в честь 30-летия коллектива">
+					</a>
+					<div class="buy">
+						<a href="/event/347069#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/347069">Хор Сретенского монастыря. Юбилейный концерт в честь 30-летия коллектива</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>29
+										сен
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 7000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					30
+					сентября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/347721">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/765/647/activity-list-212042.jpg" alt="Ислам Итляшев">
+					</a>
+					<div class="buy">
+						<a href="/event/347721#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/347721">Ислам Итляшев</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>30
+										сен
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1800 - 7000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					3
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/344323">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/767/166/activity-list-15998.jpg" alt="Анвар Нургалиев">
+					</a>
+					<div class="buy">
+						<a href="/event/344323#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/344323">Анвар Нургалиев</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>3
+										окт
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2200 - 2800</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					4
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/322237">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/144/375/activity-list-14.jpg" alt="Классический Русский балет (под рук. Х. Усманова) «Спящая красавица»">
+					</a>
+					<div class="buy">
+						<a href="/event/322237#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/322237">Классический Русский балет (под рук. Х. Усманова) «Спящая красавица»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>4
+										окт
+										14:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1500 - 3500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/321619">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/860/567/activity-list-9821.jpg" alt="Классический Русский балет (под рук. Х. Усманова) «Лебединое озеро»">
+					</a>
+					<div class="buy">
+						<a href="/event/321619#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/321619">Классический Русский балет (под рук. Х. Усманова) «Лебединое озеро»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>4
+										окт
+										18:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					7
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/344181">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/575/741/activity-list-93091.jpg" alt="Стендап-концерт Виктории Складчиковой">
+					</a>
+					<div class="buy">
+						<a href="/event/344181#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/344181">Стендап-концерт Виктории Складчиковой</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>7
+										окт
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2800 - 5900</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					8
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/349092">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/951/341/activity-list-349091.jpg" alt="Надежда Ангарская. Сольный стендап концерт">
+					</a>
+					<div class="buy">
+						<a href="/event/349092#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349092">Надежда Ангарская. Сольный стендап концерт</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Brooklyn Bowl</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>8
+										окт
+										20:00
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1600 - 2800</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					14
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/329104">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/389/980/activity-list-329101.jpg" alt="Хор Русского Рока при свечах - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/329104#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/329104">Хор Русского Рока при свечах - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>14
+										окт
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2300 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					15
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/328840">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/729/627/activity-list-328839.jpg" alt="Симфония Стинг при свечах - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/328840#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/328840">Симфония Стинг при свечах - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>15
+										окт
+										19:00
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1900 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/334725">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/481/293/activity-list-282936.jpg" alt="Тринадцать Карат">
+					</a>
+					<div class="buy">
+						<a href="/event/334725#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/334725">Тринадцать Карат</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>15
+										окт
+										20:00
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2500 - 4500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					16
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/349088">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/978/859/activity-list-349087.jpg" alt="Спектакль «Дублеры»">
+					</a>
+					<div class="buy">
+						<a href="/event/349088#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349088">Спектакль «Дублеры»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>16
+										окт
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/344044">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/353/327/activity-list-344043.jpg" alt="Группа «Мираж»">
+					</a>
+					<div class="buy">
+						<a href="/event/344044#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/344044">Группа «Мираж»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>16
+										окт
+										20:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3100 - 6300</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					17
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/337275">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/502/542/activity-list-337274.jpg" alt="Лайк против ТикТок">
+					</a>
+					<div class="buy">
+						<a href="/event/337275#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/337275">Лайк против ТикТок</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>17
+										окт
+										17:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1500 - 3500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					18
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/349222">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/576/700/activity-list-349221.jpg" alt="Группа «Вирус»">
+					</a>
+					<div class="buy">
+						<a href="/event/349222#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349222">Группа «Вирус»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>18
+										окт
+										19:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					20
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/328830">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/433/779/activity-list-328827.jpg" alt="Симфония Ведьмак при свечах - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/328830#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/328830">Симфония Ведьмак при свечах - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>20
+										окт
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1900 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pager">
+				<b>1</b>
+				
+				
+				
+				
+				<a href="/afisha?page=2">2</a>
+				
+				
+				<a href="/afisha?page=3">3</a>
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+		<br><br><br><br>
+		<article class="seo">
+			<h3>Мероприятия в Сургуте</h3>
+			<div class="text">
+				<p>Афиша Сургута: Все самые интересные анонсы мероприятий в Сургуте, гастроли спектаклей, выставки в Сургуте, концерты в Сургуте и многое другое!</p>
+
+<p>Добро пожаловать на виртуальную афишу Сургута! Здесь вы найдете самую актуальную информацию обо всех предстоящих мероприятиях в Сургуте - от грандиозных гастролей известных театров до уютных вечеринок в клубах Сургута. Вас ждут захватывающие спектакли в Сургуте, познавательные выставки в музеях Сургута, зажигательные концерты в Сургутской филармонии и многое другое.</p>
+
+<p>Наша афиша Сургута поможет вам всегда быть в курсе самых ярких событий города. Вы можете легко купить билеты онлайн на интересующие вас мероприятия и спланировать свой досуг в Сургуте. Не упустите возможность посетить захватывающие соревнования, увлекательные конкурсы и веселые вечеринки в клубах Сургута.</p>
+
+<p>Будьте в курсе всех культурных событий в Сургуте вместе с нашей афишей! Мы регулярно обновляем информацию о предстоящих концертах, спектаклях, выставках и других мероприятиях, чтобы вы могли выбрать самое интересное и купить билеты на лучшие события города.</p>
+			</div>
+		</article>
+
+
+	
+	
+	
+
+	
+	
+	
+</div>
+            <div class="cookie-container">
+                <div class="cookie-text">
+                    Для корректной работы сайта используются cookie-файлы &#127850; Более подробную информацию вы можете получить
+                    по
+                    <a class="cookie-link" href="/page/cookies-info">ссылке</a>
+                </div>
+                <div class="cookie-options">
+                    <label class="cookie-label">
+                        <input checked required disabled type="checkbox" name="mandatory-cookies" value="true">
+                        Обязательные cookie-файлы
+                    </label>
+                    <label class="cookie-label">
+                        <input checked type="checkbox" name="optional-cookies" value="true">
+                        Необязательные cookie-файлы
+                    </label>
+                </div>
+                <button class="cookie-button__accept btn btn-primary btn-default" onclick="acceptCookies()">Принять</button>
+            </div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row footer-content">
+					<div class="col-lg-2 col-md-2 footer__col copyright-col">
+						<div class="copyright">© kassa-ugra.ru 2026</div>
+						<div class="sep"></div>
+							<ul class="social-menu">
+								<li><a href="https://vk.com/kassa_ugra"><i aria-hidden="true" class="icon-vk"></i></a></li>
+								<li><a href="https://www.ok.ru/profile/576033786312"><i aria-hidden="true" class="icon-ok"></i></a></li>
+								<li><a href="https://t.me/kassa_ugra"><i aria-hidden="true" class="icon-tg"></i></a></li>
+								<li><a href="https://max.ru/id8602188629_biz"><i aria-hidden="true" class="icon-max-app"></i></a></li>
+							</ul>
+					</div>
+						<div class="col-lg-2 col-md-2 footer__col">
+						<div class="footer__col-title">Помощь</div>
+						<ul class="footer__col-menu">
+								<li><a href="/page/payment">Как оплатить</a></li>
+								<li><a href="/page/return">Правила возврата</a></li>
+								<li><a href="/page/refund">Возврат билетов</a></li>
+						</ul>
+					</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">Информация</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/public-offer">Публичная оферта</a></li>
+									<li><a href="/page/pushkin">Пушкинская карта</a></li>
+							</ul>
+						</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">О нас</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/contacts">Контакты</a></li>
+							</ul>
+						</div>
+
+					<div class="col-lg-3 col-md-2 footer__col no-padding-left">
+						<div class="footer__col-title">Способы оплаты</div>
+						<ul class="payment-menu">
+							<li><i aria-hidden="true" class="icon-visa"></i></li>
+							<li><i aria-hidden="true" class="icon-mastercard"></i></li>
+							<li><i aria-hidden="true" class="icon-mir"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="/js/jquery.min.js?0"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="/assets/g-ui/g-ui.js"></script>
+		<script src="/assets/slick/slick.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/desktop.js?10"></script>
+		<script src="/js/horizontal-calendar.js"></script>
+		<script src="/js/jquery.mask.min.js?0"></script>
+		<script src="/js/jquery.cookie.min.js?0"></script>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(50431492, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true,
+                ecommerce:"dataLayer"
+            });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/103356605" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+	</div>
+	</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Мероприятия в Сургуте | Афиша и билеты | Kassa-Ugra.ru</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Узнайте о самых интересных мероприятиях в Сургуте на Kassa-Ugra.ru! Мы предлагаем актуальную афишу с билетами на концерты, театральные постановки, выставки и другие события. Не упустите возможность посетить яркие события города!">
+		<meta name="keywords" content="мероприятия в Сургуте, афиша Сургут, купить билеты на мероприятия, концерты, театры, выставки, культурные события, Kassa-Ugra">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="yandex-verification" content="894b3ac7a5c9f64a" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+		<link rel="image_src" href="/images/logo-share.png">
+		<link rel="stylesheet" href="/assets/icomoon/style.css"/>
+		<link rel="stylesheet" href="/assets/g-ui/g-ui.css"/>
+		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.min.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick-theme.css"/>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+		<link rel="stylesheet" href="/css/main.css"/>
+		<link rel="stylesheet" href="/css/horizontal-calendar.css"/>
+		<script src="https://api-maps.yandex.ru/v3/?apikey=0117b41b-b5df-46aa-80b0-1411cb53cb4b&lang=ru_RU"></script>
+	</head>
+	<body>
+	<div id="main">
+		<header>
+			<div class="hide-767">
+				<nav class="top-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-2 col-md-2">
+									<select name="city" class="g-select city-select" onchange="selectCity(this)">
+											<option  value="342757">Анапа</option>
+											<option  value="299699">Астрахань</option>
+											<option  value="279206">Барнаул</option>
+											<option  value="341476">Верхняя Тура</option>
+											<option  value="28914">Губкинский</option>
+											<option  value="167062">Екатеринбург</option>
+											<option  value="322558">Искитим</option>
+											<option  value="196015">Ишим</option>
+											<option  value="299700">Калининград</option>
+											<option  value="318365">Канск</option>
+											<option  value="167128">Кемерово</option>
+											<option  value="196">Когалым</option>
+											<option  value="167271">Красноярск</option>
+											<option  value="285236">Курган</option>
+											<option  value="282944">Лабытнанги</option>
+											<option  value="28238">Лангепас</option>
+											<option  value="299138">Лесной</option>
+											<option  value="167444">Лянтор</option>
+											<option  value="195989">Мегион</option>
+											<option  value="167152">Москва</option>
+											<option  value="210433">Муравленко</option>
+											<option  value="299703">Мурманск</option>
+											<option  value="211010">Надым</option>
+											<option  value="13">Нефтеюганск</option>
+											<option  value="47">Нижневартовск</option>
+											<option  value="320574">Новосибирск</option>
+											<option  value="5570">Новый-Уренгой</option>
+											<option  value="5573">Ноябрьск</option>
+											<option  value="277401">Пермь</option>
+											<option  value="337273">Покачи</option>
+											<option  value="210983">Радужный</option>
+											<option  value="211005">Салехард</option>
+											<option  value="167065">Санкт-Петербург</option>
+											<option  value="211016">Стрежевой</option>
+											<option  selected  value="3">Сургут</option>
+											<option  value="318370">Тайшет</option>
+											<option  value="166480">Тобольск</option>
+											<option  value="318362">Тулун</option>
+											<option  value="8901">Тюмень</option>
+											<option  value="212715">Урай</option>
+											<option  value="285239">Уфа</option>
+											<option  value="211015">Фёдоровский</option>
+											<option  value="87">Ханты-Мансийск</option>
+											<option  value="299142">Челябинск</option>
+											<option  value="335153">Югорск</option>
+									</select>
+							</div>
+							<div class="col-lg-5 col-md-3 no-padding-left">
+								<div class="search-input">
+									<form class="search" action="/afisha" method="get">
+										<button type="submit" class="search-btn"><i aria-hidden="true" class="icon-search"></i></button>
+										<input type="text" value="" name="_q" placeholder="Поиск по мероприятиям, людям и местам"/>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-7">
+								<div class="d-flex justify-content-lg-end justify-content-md-between">
+									<ul class="d-flex menu top-menu">
+											<li><a href="/venues">Залы</a></li><li><a href="/retail">Кассы</a></li>
+										<li id="cld">
+											<a href="#" class="dashed-link">Календарь событий</a>
+											<div class="dropdown">
+												<div class="box">
+													<div class="title">Календарь событий</div>
+													<div class="calendar">
+														<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+										<a href="tel: +7 (3462) 33-12-44" class="phone icon-phone-display">+7 (3462) 33-12-44</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<nav class="bottom-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-2">
+								<div class="logo"><a href="/"><img src="/images/logo.webp"/></a></div>
+							</div>
+							<div class="col-7 no-padding-left genre-categories">
+								<ul class="menu bottom-menu d-flex">
+									<li>
+										<a href="/afisha/concerts">Концерты</a>
+									</li>
+
+									<li>
+										<a href="/afisha/show">Шоу</a>
+									</li>
+
+									<li>
+										<a href="/afisha/theatre">Театр</a>
+									</li>
+
+									<li>
+										<a href="/afisha/stendup">Стендап</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="main-content">
+			<div class="container">
+	<div class="breadcrumbs">
+		<ul>
+			<a href="/">Главная</a> /
+			<a href="/afisha">Афиша</a>
+		</ul>
+	</div>
+
+
+	<h1>Мероприятия в Сургуте</h1>
+	<div id="afisha">
+
+		<aside>
+			<div id="filter">
+				<div class="form-control afisha_filters">
+					<label for="sort">Сортировка</label>
+					<select id="sort" class="simple-select">
+						<option name="sort" value="0">По дате</option>
+						<option name="sort" value="1">По спросу</option>
+						<option name="sort" value="2">По рейтингу</option>
+					</select>
+				</div>
+				<div class="form-control afisha_filters">
+					<label for="type">Фильтры</label>
+					<select id="type" class="simple-select">
+						<option value="0">Все</option>
+						<option  name="premieres" value="3">Премьеры</option>
+						<option  name="tours" value="4">Гастроли</option>
+					</select>
+				</div>
+			</div>
+			<div class="calendar">
+				<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+			</div>
+		</aside>
+
+		<div id="left-block">
+
+			<div class="events" id="list_content">
+				<h4>
+					22
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/345403">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/720/987/activity-list-345402.jpg" alt="Мюзикл «Tango de mi Vida» («Танго – моя жизнь»)">
+					</a>
+					<div class="buy">
+						<a href="/event/345403#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/345403">Мюзикл «Tango de mi Vida» («Танго – моя жизнь»)</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>22
+										окт
+										19:00
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/283545">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/768/124/activity-list-283544.jpg" alt="Виктор Комаров">
+					</a>
+					<div class="buy">
+						<a href="/event/283545#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/283545">Виктор Комаров</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Brooklyn Bowl</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>22
+										окт
+										20:00
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2100 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					23
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/339296">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/621/958/activity-list-127042.jpg" alt="Спектакль «Подыскиваю жену. Недорого!»">
+					</a>
+					<div class="buy">
+						<a href="/event/339296#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/339296">Спектакль «Подыскиваю жену. Недорого!»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>23
+										окт
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/330497">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/577/911/activity-list-32143.jpg" alt="Шоу Уральские Пельмени «Лучшее»">
+					</a>
+					<div class="buy">
+						<a href="/event/330497#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/330497">Шоу Уральские Пельмени «Лучшее»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Дворец искусств Нефтяник</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>23
+										окт
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3500 - 16000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					24
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/342861">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/346/266/activity-list-210944.jpg" alt="Музыкальное шоу «Электронная симфония»">
+					</a>
+					<div class="buy">
+						<a href="/event/342861#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/342861">Музыкальное шоу «Электронная симфония»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>24
+										окт
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1500 - 4500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					25
+					октября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/337409">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/726/409/activity-list-185250.jpg" alt="Ильсия Бадретдинова">
+					</a>
+					<div class="buy">
+						<a href="/event/337409#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/337409">Ильсия Бадретдинова</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>25
+										окт
+										15:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 4500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					3
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/343999">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/123/628/activity-list-343998.jpg" alt="СУПЕР ДИСКОТЕКА 2000х">
+					</a>
+					<div class="buy">
+						<a href="/event/343999#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/343999">СУПЕР ДИСКОТЕКА 2000х</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>3
+										ноя
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 7000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					11
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/337191">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/187/569/activity-list-308401.jpg" alt="Оркестр CAGMO. Саундтреки Эйнауди. Двойной концерт при свечах">
+					</a>
+					<div class="buy">
+						<a href="/event/337191#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/337191">Оркестр CAGMO. Саундтреки Эйнауди. Двойной концерт при свечах</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>11
+										ноя
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1900 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					12
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/319724">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/120/886/activity-list-319723.jpg" alt="Standup Никита Шевчук «Фантазёр»">
+					</a>
+					<div class="buy">
+						<a href="/event/319724#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/319724">Standup Никита Шевчук «Фантазёр»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>12
+										ноя
+										19:30
+										Чт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2200 - 4600</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					15
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/349225">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/460/853/activity-list-349224.jpg" alt="Роман Постовалов: Роман с юмором. Сольный концерт.">
+					</a>
+					<div class="buy">
+						<a href="/event/349225#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349225">Роман Постовалов: Роман с юмором. Сольный концерт.</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>15
+										ноя
+										19:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1500 - 4900</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					22
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/343066">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/917/846/activity-list-255409.jpg" alt="Александр Иванов и группа «Рондо»">
+					</a>
+					<div class="buy">
+						<a href="/event/343066#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/343066">Александр Иванов и группа «Рондо»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>22
+										ноя
+										19:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 9000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					23
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/331111">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/856/506/activity-list-97521.jpg" alt="Группа «САДко. Для тебя»">
+					</a>
+					<div class="buy">
+						<a href="/event/331111#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/331111">Группа «САДко. Для тебя»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>23
+										ноя
+										19:00
+										Пн</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 6500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					25
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/328823">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/552/367/activity-list-328821.jpg" alt="Симфония МТВ при свечах - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/328823#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/328823">Симфония МТВ при свечах - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>25
+										ноя
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1900 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					27
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/328044">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/689/914/activity-list-328039.jpg" alt="Эдуард Изместьев">
+					</a>
+					<div class="buy">
+						<a href="/event/328044#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/328044">Эдуард Изместьев</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>27
+										ноя
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2500 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					29
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/333956">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/991/702/activity-list-333955.jpg" alt="Дуэт «Пара»">
+					</a>
+					<div class="buy">
+						<a href="/event/333956#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/333956">Дуэт «Пара»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>29
+										ноя
+										19:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2500 - 3700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					30
+					ноября,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/341354">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/603/733/activity-list-341353.jpg" alt="Спектакль «Моя безумная свадьба»">
+					</a>
+					<div class="buy">
+						<a href="/event/341354#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/341354">Спектакль «Моя безумная свадьба»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>30
+										ноя
+										19:00
+										Пн</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2500 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					1
+					декабря,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/348992">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/650/701/activity-list-212914.jpg" alt="Ирина и Александр Круг">
+					</a>
+					<div class="buy">
+						<a href="/event/348992#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/348992">Ирина и Александр Круг</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>1
+										дек
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 7000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/348671">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/595/189/activity-list-207848.jpg" alt="Сурганова и оркестр «Лучшее»">
+					</a>
+					<div class="buy">
+						<a href="/event/348671#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/348671">Сурганова и оркестр «Лучшее»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Дворец искусств Нефтяник</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>1
+										дек
+										19:00
+										Вт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2500 - 6000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					4
+					декабря,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/345408">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/354/400/activity-list-345405.jpg" alt="Комедийный спектакль «Иван Васильевич меняет профессию»">
+					</a>
+					<div class="buy">
+						<a href="/event/345408#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/345408">Комедийный спектакль «Иван Васильевич меняет профессию»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>4
+										дек
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 6000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/342997">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/104/487/activity-list-342996.jpg" alt="Света">
+					</a>
+					<div class="buy">
+						<a href="/event/342997#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/342997">Света</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>4
+										дек
+										20:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3150 - 8300</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pager">
+				
+				
+				<a href="/afisha">1</a>
+				<b>2</b>
+				
+				
+				
+				
+				<a href="/afisha?page=3">3</a>
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+</div>
+            <div class="cookie-container">
+                <div class="cookie-text">
+                    Для корректной работы сайта используются cookie-файлы &#127850; Более подробную информацию вы можете получить
+                    по
+                    <a class="cookie-link" href="/page/cookies-info">ссылке</a>
+                </div>
+                <div class="cookie-options">
+                    <label class="cookie-label">
+                        <input checked required disabled type="checkbox" name="mandatory-cookies" value="true">
+                        Обязательные cookie-файлы
+                    </label>
+                    <label class="cookie-label">
+                        <input checked type="checkbox" name="optional-cookies" value="true">
+                        Необязательные cookie-файлы
+                    </label>
+                </div>
+                <button class="cookie-button__accept btn btn-primary btn-default" onclick="acceptCookies()">Принять</button>
+            </div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row footer-content">
+					<div class="col-lg-2 col-md-2 footer__col copyright-col">
+						<div class="copyright">© kassa-ugra.ru 2026</div>
+						<div class="sep"></div>
+							<ul class="social-menu">
+								<li><a href="https://vk.com/kassa_ugra"><i aria-hidden="true" class="icon-vk"></i></a></li>
+								<li><a href="https://www.ok.ru/profile/576033786312"><i aria-hidden="true" class="icon-ok"></i></a></li>
+								<li><a href="https://t.me/kassa_ugra"><i aria-hidden="true" class="icon-tg"></i></a></li>
+								<li><a href="https://max.ru/id8602188629_biz"><i aria-hidden="true" class="icon-max-app"></i></a></li>
+							</ul>
+					</div>
+						<div class="col-lg-2 col-md-2 footer__col">
+						<div class="footer__col-title">Помощь</div>
+						<ul class="footer__col-menu">
+								<li><a href="/page/payment">Как оплатить</a></li>
+								<li><a href="/page/return">Правила возврата</a></li>
+								<li><a href="/page/refund">Возврат билетов</a></li>
+						</ul>
+					</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">Информация</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/public-offer">Публичная оферта</a></li>
+									<li><a href="/page/pushkin">Пушкинская карта</a></li>
+							</ul>
+						</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">О нас</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/contacts">Контакты</a></li>
+							</ul>
+						</div>
+
+					<div class="col-lg-3 col-md-2 footer__col no-padding-left">
+						<div class="footer__col-title">Способы оплаты</div>
+						<ul class="payment-menu">
+							<li><i aria-hidden="true" class="icon-visa"></i></li>
+							<li><i aria-hidden="true" class="icon-mastercard"></i></li>
+							<li><i aria-hidden="true" class="icon-mir"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="/js/jquery.min.js?0"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="/assets/g-ui/g-ui.js"></script>
+		<script src="/assets/slick/slick.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/desktop.js?10"></script>
+		<script src="/js/horizontal-calendar.js"></script>
+		<script src="/js/jquery.mask.min.js?0"></script>
+		<script src="/js/jquery.cookie.min.js?0"></script>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(50431492, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true,
+                ecommerce:"dataLayer"
+            });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/103356605" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+	</div>
+	</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Мероприятия в Сургуте | Афиша и билеты | Kassa-Ugra.ru</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Узнайте о самых интересных мероприятиях в Сургуте на Kassa-Ugra.ru! Мы предлагаем актуальную афишу с билетами на концерты, театральные постановки, выставки и другие события. Не упустите возможность посетить яркие события города!">
+		<meta name="keywords" content="мероприятия в Сургуте, афиша Сургут, купить билеты на мероприятия, концерты, театры, выставки, культурные события, Kassa-Ugra">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="yandex-verification" content="894b3ac7a5c9f64a" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+		<link rel="image_src" href="/images/logo-share.png">
+		<link rel="stylesheet" href="/assets/icomoon/style.css"/>
+		<link rel="stylesheet" href="/assets/g-ui/g-ui.css"/>
+		<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.min.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick.css"/>
+		<link rel="stylesheet" href="/assets/slick/slick-theme.css"/>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+		<link rel="stylesheet" href="/css/main.css"/>
+		<link rel="stylesheet" href="/css/horizontal-calendar.css"/>
+		<script src="https://api-maps.yandex.ru/v3/?apikey=0117b41b-b5df-46aa-80b0-1411cb53cb4b&lang=ru_RU"></script>
+	</head>
+	<body>
+	<div id="main">
+		<header>
+			<div class="hide-767">
+				<nav class="top-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-2 col-md-2">
+									<select name="city" class="g-select city-select" onchange="selectCity(this)">
+											<option  value="342757">Анапа</option>
+											<option  value="299699">Астрахань</option>
+											<option  value="279206">Барнаул</option>
+											<option  value="341476">Верхняя Тура</option>
+											<option  value="28914">Губкинский</option>
+											<option  value="167062">Екатеринбург</option>
+											<option  value="322558">Искитим</option>
+											<option  value="196015">Ишим</option>
+											<option  value="299700">Калининград</option>
+											<option  value="318365">Канск</option>
+											<option  value="167128">Кемерово</option>
+											<option  value="196">Когалым</option>
+											<option  value="167271">Красноярск</option>
+											<option  value="285236">Курган</option>
+											<option  value="282944">Лабытнанги</option>
+											<option  value="28238">Лангепас</option>
+											<option  value="299138">Лесной</option>
+											<option  value="167444">Лянтор</option>
+											<option  value="195989">Мегион</option>
+											<option  value="167152">Москва</option>
+											<option  value="210433">Муравленко</option>
+											<option  value="299703">Мурманск</option>
+											<option  value="211010">Надым</option>
+											<option  value="13">Нефтеюганск</option>
+											<option  value="47">Нижневартовск</option>
+											<option  value="320574">Новосибирск</option>
+											<option  value="5570">Новый-Уренгой</option>
+											<option  value="5573">Ноябрьск</option>
+											<option  value="277401">Пермь</option>
+											<option  value="337273">Покачи</option>
+											<option  value="210983">Радужный</option>
+											<option  value="211005">Салехард</option>
+											<option  value="167065">Санкт-Петербург</option>
+											<option  value="211016">Стрежевой</option>
+											<option  selected  value="3">Сургут</option>
+											<option  value="318370">Тайшет</option>
+											<option  value="166480">Тобольск</option>
+											<option  value="318362">Тулун</option>
+											<option  value="8901">Тюмень</option>
+											<option  value="212715">Урай</option>
+											<option  value="285239">Уфа</option>
+											<option  value="211015">Фёдоровский</option>
+											<option  value="87">Ханты-Мансийск</option>
+											<option  value="299142">Челябинск</option>
+											<option  value="335153">Югорск</option>
+									</select>
+							</div>
+							<div class="col-lg-5 col-md-3 no-padding-left">
+								<div class="search-input">
+									<form class="search" action="/afisha" method="get">
+										<button type="submit" class="search-btn"><i aria-hidden="true" class="icon-search"></i></button>
+										<input type="text" value="" name="_q" placeholder="Поиск по мероприятиям, людям и местам"/>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-7">
+								<div class="d-flex justify-content-lg-end justify-content-md-between">
+									<ul class="d-flex menu top-menu">
+											<li><a href="/venues">Залы</a></li><li><a href="/retail">Кассы</a></li>
+										<li id="cld">
+											<a href="#" class="dashed-link">Календарь событий</a>
+											<div class="dropdown">
+												<div class="box">
+													<div class="title">Календарь событий</div>
+													<div class="calendar">
+														<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+										<a href="tel: +7 (3462) 33-12-44" class="phone icon-phone-display">+7 (3462) 33-12-44</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<nav class="bottom-nav">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-2">
+								<div class="logo"><a href="/"><img src="/images/logo.webp"/></a></div>
+							</div>
+							<div class="col-7 no-padding-left genre-categories">
+								<ul class="menu bottom-menu d-flex">
+									<li>
+										<a href="/afisha/concerts">Концерты</a>
+									</li>
+
+									<li>
+										<a href="/afisha/show">Шоу</a>
+									</li>
+
+									<li>
+										<a href="/afisha/theatre">Театр</a>
+									</li>
+
+									<li>
+										<a href="/afisha/stendup">Стендап</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="main-content">
+			<div class="container">
+	<div class="breadcrumbs">
+		<ul>
+			<a href="/">Главная</a> /
+			<a href="/afisha">Афиша</a>
+		</ul>
+	</div>
+
+
+	<h1>Мероприятия в Сургуте</h1>
+	<div id="afisha">
+
+		<aside>
+			<div id="filter">
+				<div class="form-control afisha_filters">
+					<label for="sort">Сортировка</label>
+					<select id="sort" class="simple-select">
+						<option name="sort" value="0">По дате</option>
+						<option name="sort" value="1">По спросу</option>
+						<option name="sort" value="2">По рейтингу</option>
+					</select>
+				</div>
+				<div class="form-control afisha_filters">
+					<label for="type">Фильтры</label>
+					<select id="type" class="simple-select">
+						<option value="0">Все</option>
+						<option  name="premieres" value="3">Премьеры</option>
+						<option  name="tours" value="4">Гастроли</option>
+					</select>
+				</div>
+			</div>
+			<div class="calendar">
+				<div class="header">
+	<a href="#" onclick="return load_calendar('5', '2026');"></a>
+	<a href="#" onclick="return load_calendar('7', '2026');" class="next"></a>
+	Июнь
+	2026
+</div>
+
+<div class="days">
+	<span>Пн</span>
+	<span>Вт</span>
+	<span>Ср</span>
+	<span>Чт</span>
+	<span>Пт</span>
+	<span>Сб</span>
+	<span>Вс</span>
+</div>
+
+<div class="grid">
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+		<span>13</span>
+		
+		
+		<span>14</span>
+		
+		
+		<span>15</span>
+		
+		
+		<span>16</span>
+		
+		
+		<span>17</span>
+		
+		
+		<span>18</span>
+		
+		
+		<span>19</span>
+		
+		
+		<span>20</span>
+		
+		
+		<span>21</span>
+		
+		
+		<span>22</span>
+		
+		
+		<span>23</span>
+		
+		
+		<span>24</span>
+		
+		
+		<span>25</span>
+		
+		
+		<span>26</span>
+		
+		
+		
+		
+		<a href="/afisha/2026/06/27"><b>27</b></a>
+		
+		<a href="/afisha/2026/06/28">28</a>
+		
+		
+		<a href="/afisha/2026/06/29">29</a>
+		
+		
+		<a href="/afisha/2026/06/30">30</a>
+		
+		<span>01</span>
+		
+		
+		<span>02</span>
+		
+		
+		<span>03</span>
+		
+		
+		<span>04</span>
+		
+		
+		<span>05</span>
+		
+		
+		<span>06</span>
+		
+		
+		<span>07</span>
+		
+		
+		<span>08</span>
+		
+		
+		<span>09</span>
+		
+		
+		<span>10</span>
+		
+		
+		<span>11</span>
+		
+		
+		<span>12</span>
+		
+		
+</div>
+			</div>
+		</aside>
+
+		<div id="left-block">
+
+			<div class="events" id="list_content">
+				<h4>
+					12
+					декабря,
+					2026
+				</h4>
+				<div class="event">
+					<a href="/event/345462">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/840/715/activity-list-345456.jpg" alt="КняZz. Мастер Кукол.">
+					</a>
+					<div class="buy">
+						<a href="/event/345462#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/345462">КняZz. Мастер Кукол.</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>12
+										дек
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3500 - 7500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					15
+					января,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/344046">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/664/801/activity-list-308384.jpg" alt="Саундтреки Ханса Циммера при свечах - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/344046#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/344046">Саундтреки Ханса Циммера при свечах - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>15
+										янв
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>1900 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					16
+					января,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/345581">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/751/821/activity-list-345580.jpg" alt="Оперетта «Летучая мышь»">
+					</a>
+					<div class="buy">
+						<a href="/event/345581#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/345581">Оперетта «Летучая мышь»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>16
+										янв
+										15:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/345566">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/319/123/activity-list-278706.jpg" alt="Мюзикл «Фантом. Призрак Оперы»">
+					</a>
+					<div class="buy">
+						<a href="/event/345566#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/345566">Мюзикл «Фантом. Призрак Оперы»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>16
+										янв
+										19:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					24
+					января,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/331531">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/163/528/activity-list-25691.jpg" alt="Классический Русский балет (под рук. Х. Усманова) «Щелкунчик»">
+					</a>
+					<div class="buy">
+						<a href="/event/331531#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/331531">Классический Русский балет (под рук. Х. Усманова) «Щелкунчик»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>24
+										янв
+										14:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="event">
+					<a href="/event/331688">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/163/528/activity-list-25691.jpg" alt="Классический Русский балет (под рук. Х. Усманова) «Щелкунчик»">
+					</a>
+					<div class="buy">
+						<a href="/event/331688#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/331688">Классический Русский балет (под рук. Х. Усманова) «Щелкунчик»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>24
+										янв
+										18:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 4000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					27
+					января,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/347628">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/915/423/activity-list-347627.jpg" alt="Спектакль «Мужчина нарасхват»">
+					</a>
+					<div class="buy">
+						<a href="/event/347628#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/347628">Спектакль «Мужчина нарасхват»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>27
+										янв
+										19:00
+										Ср</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 8500</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					30
+					января,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/344049">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/922/535/activity-list-344048.jpg" alt="Песни Советских Кинофильмов - Оркестр CAGMO">
+					</a>
+					<div class="buy">
+						<a href="/event/344049#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/344049">Песни Советских Кинофильмов - Оркестр CAGMO</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>30
+										янв
+										18:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2300 - 5700</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					5
+					февраля,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/341544">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/476/127/activity-list-341540.jpg" alt="Музыкальный спектакль «Джо Дассен»">
+					</a>
+					<div class="buy">
+						<a href="/event/341544#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/341544">Музыкальный спектакль «Джо Дассен»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>5
+										фев
+										19:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2000 - 4400</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					14
+					февраля,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/340846">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/445/252/activity-list-340845.jpg" alt="Группа «Нэнси»">
+					</a>
+					<div class="buy">
+						<a href="/event/340846#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/340846">Группа «Нэнси»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Сургутская филармония</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>14
+										фев
+										19:00
+										Вс</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3000 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					12
+					марта,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/349434">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/937/679/activity-list-349431.jpg" alt="Ramil">
+					</a>
+					<div class="buy">
+						<a href="/event/349434#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/349434">Ramil</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>Вавилон</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>12
+										мар
+										20:00
+										Пт</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>2300 - 5000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h4>
+					13
+					марта,
+					2027
+				</h4>
+				<div class="event">
+					<a href="/event/341571">
+						<img src="https://tickets.s3.yandex.net/upload/ugra/476/560/activity-list-108661.jpg" alt="Группа «Бутырка»">
+					</a>
+					<div class="buy">
+						<a href="/event/341571#show-order" class="btn btn-primary btn-small">
+							<span>Купить</span>
+						</a>
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="/event/341571">Группа «Бутырка»</a>
+						</div>
+						<div class="details">
+							<ul class="info-list info-list-card info-card">
+								<li><i aria-hidden="true" class="icon-location"></i><span>СурГУ</span></li>
+								<li><i aria-hidden="true" class="icon-calendar"></i><span>13
+										мар
+										18:00
+										Сб</span></li>
+								<li><i aria-hidden="true" class="icon-purse"></i><span>3000 - 6000</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pager">
+				
+				
+				<a href="/afisha">1</a>
+				
+				
+				<a href="/afisha?page=2">2</a>
+				<b>3</b>
+				
+				
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+</div>
+            <div class="cookie-container">
+                <div class="cookie-text">
+                    Для корректной работы сайта используются cookie-файлы &#127850; Более подробную информацию вы можете получить
+                    по
+                    <a class="cookie-link" href="/page/cookies-info">ссылке</a>
+                </div>
+                <div class="cookie-options">
+                    <label class="cookie-label">
+                        <input checked required disabled type="checkbox" name="mandatory-cookies" value="true">
+                        Обязательные cookie-файлы
+                    </label>
+                    <label class="cookie-label">
+                        <input checked type="checkbox" name="optional-cookies" value="true">
+                        Необязательные cookie-файлы
+                    </label>
+                </div>
+                <button class="cookie-button__accept btn btn-primary btn-default" onclick="acceptCookies()">Принять</button>
+            </div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row footer-content">
+					<div class="col-lg-2 col-md-2 footer__col copyright-col">
+						<div class="copyright">© kassa-ugra.ru 2026</div>
+						<div class="sep"></div>
+							<ul class="social-menu">
+								<li><a href="https://vk.com/kassa_ugra"><i aria-hidden="true" class="icon-vk"></i></a></li>
+								<li><a href="https://www.ok.ru/profile/576033786312"><i aria-hidden="true" class="icon-ok"></i></a></li>
+								<li><a href="https://t.me/kassa_ugra"><i aria-hidden="true" class="icon-tg"></i></a></li>
+								<li><a href="https://max.ru/id8602188629_biz"><i aria-hidden="true" class="icon-max-app"></i></a></li>
+							</ul>
+					</div>
+						<div class="col-lg-2 col-md-2 footer__col">
+						<div class="footer__col-title">Помощь</div>
+						<ul class="footer__col-menu">
+								<li><a href="/page/payment">Как оплатить</a></li>
+								<li><a href="/page/return">Правила возврата</a></li>
+								<li><a href="/page/refund">Возврат билетов</a></li>
+						</ul>
+					</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">Информация</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/public-offer">Публичная оферта</a></li>
+									<li><a href="/page/pushkin">Пушкинская карта</a></li>
+							</ul>
+						</div>
+
+						<div class="col-lg-2 col-md-2 footer__col">
+							<div class="footer__col-title">О нас</div>
+							<ul class="footer__col-menu">
+									<li><a href="/page/contacts">Контакты</a></li>
+							</ul>
+						</div>
+
+					<div class="col-lg-3 col-md-2 footer__col no-padding-left">
+						<div class="footer__col-title">Способы оплаты</div>
+						<ul class="payment-menu">
+							<li><i aria-hidden="true" class="icon-visa"></i></li>
+							<li><i aria-hidden="true" class="icon-mastercard"></i></li>
+							<li><i aria-hidden="true" class="icon-mir"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="/js/jquery.min.js?0"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="/assets/g-ui/g-ui.js"></script>
+		<script src="/assets/slick/slick.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/desktop.js?10"></script>
+		<script src="/js/horizontal-calendar.js"></script>
+		<script src="/js/jquery.mask.min.js?0"></script>
+		<script src="/js/jquery.cookie.min.js?0"></script>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(50431492, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true,
+                ecommerce:"dataLayer"
+            });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/103356605" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+	</div>
+	</body>
+</html>

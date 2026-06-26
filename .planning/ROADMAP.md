@@ -29,7 +29,16 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `GET /api/sources/status` shows per-source `status`, `fetchedAt`, and `eventCount`; killing a source mid-cycle causes the next response to show `cached` with the last-valid event count, never an empty list
   4. lint, typecheck, and build all pass cleanly with no type errors on public functions
   5. The app is publicly reachable at https://surgut-go.apps.sielom.ru with `/health`, `/api/events`, and `/api/sources/status` returning correct responses
-**Plans**: TBD
+**Plans**: 8 plans (6 waves) — Walking Skeleton; see 01-SKELETON.md
+Plans:
+- [ ] 01-1-PLAN.md — Scaffold project + domain contracts + Wave-0 live-source selector discovery
+- [ ] 01-2-PLAN.md — Russian date/price utilities (TDD) + polite HTTP fetch + robots compliance
+- [ ] 01-3-PLAN.md — Honest seed fallback + durable JSON cache store + in-memory EventIndex
+- [ ] 01-4-PLAN.md — Boot-first Fastify server + /health + esbuild multi-stage Dockerfile (deployable skeleton)
+- [ ] 01-5-PLAN.md — Parallel scrape pipeline (error isolation, min-results, serve-stale) + cron refresh loop
+- [ ] 01-6-PLAN.md — API routes: /api/events (filters + Ajv) and /api/sources/status
+- [ ] 01-7-PLAN.md — kassa-ugra.ru + afisha.surguta.ru GREEN adapters (fixture-tested) + registry wiring
+- [ ] 01-8-PLAN.md — Quality gate + GitHub repo (push main) + operator /deploy to surgut-go.apps.sielom.ru
 
 ### Phase 2: Core Product UI & Mood Recommendations
 **Goal**: A user on mobile taps one of four mood buttons and immediately sees ranked, honest event cards with a "Почему рекомендовано" label — the core value proposition is delivered end-to-end in the browser.
@@ -65,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Deployable Pipeline & Green Sources | 0/TBD | Not started | - |
+| 1. Deployable Pipeline & Green Sources | 0/8 | Planned | - |
 | 2. Core Product UI & Mood Recommendations | 0/TBD | Not started | - |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

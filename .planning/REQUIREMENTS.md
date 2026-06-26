@@ -9,15 +9,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Aggregation Pipeline (AGG)
 
-- [ ] **AGG-01**: Сервер парсит публичные источники и нормализует события в единую модель (`title, startDate, endDate?, venue, address?, priceText, sourceName, sourceUrl, category, tags, ageLimit?, imageUrl?`)
-- [ ] **AGG-02**: Каждое событие несёт флаг `isSeed` (live vs seed/demo) — структурно невозможно выдать seed за live
+- [x] **AGG-01**: Сервер парсит публичные источники и нормализует события в единую модель (`title, startDate, endDate?, venue, address?, priceText, sourceName, sourceUrl, category, tags, ageLimit?, imageUrl?`)
+- [x] **AGG-02**: Каждое событие несёт флаг `isSeed` (live vs seed/demo) — структурно невозможно выдать seed за live
 - [ ] **AGG-03**: Дубликаты одного события из разных источников схлопываются по нечёткому ключу (нормализованный title + день startDate + нормализованный venue)
 - [ ] **AGG-04**: Общие утилиты парсинга русских дат (`Asia/Yekaterinburg`, «сегодня/завтра», русские месяцы) и цен («от 500 ₽», «бесплатно») покрыты тестами
 - [ ] **AGG-05**: Min-results guard — пустой результат при HTTP 200 трактуется как ошибка парсинга и не перезаписывает валидный кэш
 
 ### Sources (SRC)
 
-- [ ] **SRC-01**: Источник реализован как адаптер с общим интерфейсом (fetch + parse → `Event[]`), новые источники добавляются без правки пайплайна
+- [x] **SRC-01**: Источник реализован как адаптер с общим интерфейсом (fetch + parse → `Event[]`), новые источники добавляются без правки пайплайна
 - [ ] **SRC-02**: Парсер `kassa-ugra.ru/afisha` (🟢 GREEN) даёт нормализованные события
 - [ ] **SRC-03**: Парсер `afisha.surguta.ru` (🟢 GREEN, Crawl-delay 10) даёт нормализованные события с уважением к robots.txt
 - [ ] **SRC-04**: Парсер `afisha.ru/surgut` (🟡 YELLOW) с guard на хрупкость селекторов
@@ -66,7 +66,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Quality (QA)
 
-- [ ] **QA-01**: lint + typecheck + build проходят; типы на всех публичных функциях
+- [x] **QA-01**: lint + typecheck + build проходят; типы на всех публичных функциях
 - [ ] **QA-02**: vitest-тесты бизнес-логики (парсеры на фикстурах, дедуп, маппинг настроений, дата/цена) — цель 80%+ покрытия
 
 ## v2 Requirements
@@ -101,12 +101,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AGG-01 | Phase 1 | Pending |
-| AGG-02 | Phase 1 | Pending |
+| AGG-01 | Phase 1 | Complete |
+| AGG-02 | Phase 1 | Complete |
 | AGG-03 | Phase 2 | Pending |
 | AGG-04 | Phase 1 | Pending |
 | AGG-05 | Phase 1 | Pending |
-| SRC-01 | Phase 1 | Pending |
+| SRC-01 | Phase 1 | Complete |
 | SRC-02 | Phase 1 | Pending |
 | SRC-03 | Phase 1 | Pending |
 | SRC-04 | Phase 3 | Pending |
@@ -137,7 +137,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEPLOY-02 | Phase 1 | Pending |
 | DEPLOY-03 | Phase 1 | Pending |
 | DEPLOY-04 | Phase 1 | Pending |
-| QA-01 | Phase 1 | Pending |
+| QA-01 | Phase 1 | Complete |
 | QA-02 | Phase 2 | Pending |
 
 **Coverage:**

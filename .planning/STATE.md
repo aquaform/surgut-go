@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: "Completed 01-1-PLAN.md: scaffold, domain contracts, Wave-0 selectors. Next: 01-2 (kassa-ugra parser)"
+last_updated: "2026-06-26T20:05:23.431Z"
+last_activity: 2026-06-26
+progress:
+  total_phases: 3
+  completed_phases: 0
+  total_plans: 8
+  completed_plans: 1
+  percent: 0
+---
+
 # Project State
 
 ## Project Reference
@@ -5,20 +21,21 @@
 See: .planning/PROJECT.md (updated 2026-06-26)
 
 **Core value:** Пользователь нажимает кнопку-настроение и сразу получает релевантные, актуальные карточки событий Сургута с честным указанием источника и свежести данных.
-**Current focus:** Phase 1 — Deployable Pipeline & Green Sources
+**Current focus:** Phase 01 — deployable-pipeline-green-sources
 
 ## Current Position
 
-Phase: 1 of 3 (Deployable Pipeline & Green Sources)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-06-26 — Roadmap created; ready to plan Phase 1
+Phase: 01 (deployable-pipeline-green-sources) — EXECUTING
+Plan: 2 of 8
+Status: Ready to execute
+Last activity: 2026-06-26
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 13%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 0
 - Average duration: —
 - Total execution time: 0 hours
@@ -30,10 +47,12 @@ Progress: [░░░░░░░░░░] 0%
 | - | - | - | - |
 
 **Recent Trend:**
+
 - Last 5 plans: —
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-deployable-pipeline-green-sources P01-1 | 19min | 3 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -48,6 +67,10 @@ Recent decisions affecting current work:
 - Source tiers: kassa-ugra + afisha.surguta.ru are GREEN (Phase 1); afisha.ru + kassir.ru + Yandex Afisha are YELLOW (Phase 3); tbank.ru is RED (never MVP)
 - afisha.surguta.ru requires 10 s crawl-delay per robots.txt — must be in fetch layer before first scrape
 - Category URL mapping for afisha.surguta.ru is a discovery task at Phase 1 start (30-min curl investigation)
+- [Phase ?]: CJS-default package.json + esbuild --format=cjs: node server.js works without type:module
+- [Phase ?]: afisha.surguta.ru charset is UTF-8 not windows-1251 — Pitfall 10 resolved; no TextDecoder needed
+- [Phase ?]: tsconfig moduleResolution: bundler permits extensionless relative imports throughout the project
+- [Phase ?]: @types/robots-parser does not exist on npm — robots-parser ships its own TS types (confirmed)
 
 ### Pending Todos
 
@@ -70,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-26
-Stopped at: Roadmap written; STATE.md and REQUIREMENTS.md traceability initialized. Next: `/gsd:plan-phase 1`
+Last session: 2026-06-26T20:05:23.424Z
+Stopped at: Completed 01-1-PLAN.md: scaffold, domain contracts, Wave-0 selectors. Next: 01-2 (kassa-ugra parser)
 Resume file: None

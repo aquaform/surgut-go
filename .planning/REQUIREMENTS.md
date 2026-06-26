@@ -18,8 +18,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Sources (SRC)
 
 - [x] **SRC-01**: Источник реализован как адаптер с общим интерфейсом (fetch + parse → `Event[]`), новые источники добавляются без правки пайплайна
-- [ ] **SRC-02**: Парсер `kassa-ugra.ru/afisha` (🟢 GREEN) даёт нормализованные события
-- [ ] **SRC-03**: Парсер `afisha.surguta.ru` (🟢 GREEN, Crawl-delay 10) даёт нормализованные события с уважением к robots.txt
+- [x] **SRC-02**: Парсер `kassa-ugra.ru/afisha` (🟢 GREEN) даёт нормализованные события
+- [x] **SRC-03**: Парсер `afisha.surguta.ru` (🟢 GREEN, Crawl-delay 10) даёт нормализованные события с уважением к robots.txt
 - [ ] **SRC-04**: Парсер `afisha.ru/surgut` (🟡 YELLOW) с guard на хрупкость селекторов
 - [ ] **SRC-05**: Парсер `sur.kassir.ru` (🟡 YELLOW, AJAX) — концерты/театр
 - [ ] **SRC-06**: Парсер `afisha.yandex.ru/surgut` (🟡 YELLOW, риск ToS) под конфиг-тогглом, по умолчанию выключен
@@ -107,8 +107,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AGG-04 | Phase 1 | Complete |
 | AGG-05 | Phase 1 | Complete |
 | SRC-01 | Phase 1 | Complete |
-| SRC-02 | Phase 1 | Pending |
-| SRC-03 | Phase 1 | Pending |
+| SRC-02 | Phase 1 | Complete |
+| SRC-03 | Phase 1 | Complete |
 | SRC-04 | Phase 3 | Pending |
 | SRC-05 | Phase 3 | Pending |
 | SRC-06 | Phase 3 | Pending |

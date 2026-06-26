@@ -101,13 +101,56 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (заполняется roadmapper'ом) | — | Pending |
+| AGG-01 | Phase 1 | Pending |
+| AGG-02 | Phase 1 | Pending |
+| AGG-03 | Phase 2 | Pending |
+| AGG-04 | Phase 1 | Pending |
+| AGG-05 | Phase 1 | Pending |
+| SRC-01 | Phase 1 | Pending |
+| SRC-02 | Phase 1 | Pending |
+| SRC-03 | Phase 1 | Pending |
+| SRC-04 | Phase 3 | Pending |
+| SRC-05 | Phase 3 | Pending |
+| SRC-06 | Phase 3 | Pending |
+| SRC-07 | Phase 1 | Pending |
+| SRC-08 | Phase 1 | Pending |
+| CACHE-01 | Phase 1 | Pending |
+| CACHE-02 | Phase 1 | Pending |
+| CACHE-03 | Phase 1 | Pending |
+| CACHE-04 | Phase 1 | Pending |
+| API-01 | Phase 1 | Pending |
+| API-02 | Phase 1 | Pending |
+| API-03 | Phase 2 | Pending |
+| API-04 | Phase 1 | Pending |
+| API-05 | Phase 1 | Pending |
+| MOOD-01 | Phase 2 | Pending |
+| MOOD-02 | Phase 2 | Pending |
+| MOOD-03 | Phase 2 | Pending |
+| UI-01 | Phase 2 | Pending |
+| UI-02 | Phase 2 | Pending |
+| UI-03 | Phase 2 | Pending |
+| UI-04 | Phase 2 | Pending |
+| UI-05 | Phase 2 | Pending |
+| UI-06 | Phase 3 | Pending |
+| UI-07 | Phase 2 | Pending |
+| DEPLOY-01 | Phase 1 | Pending |
+| DEPLOY-02 | Phase 1 | Pending |
+| DEPLOY-03 | Phase 1 | Pending |
+| DEPLOY-04 | Phase 1 | Pending |
+| QA-01 | Phase 1 | Pending |
+| QA-02 | Phase 2 | Pending |
 
 **Coverage:**
-- v1 requirements: 33 total
-- Mapped to phases: TBD (roadmap)
-- Unmapped: TBD
+- v1 requirements: 38 total (note: file previously stated 33; actual count is 38)
+- Mapped to phases: 38/38
+- Unmapped: 0
+
+| Phase | Requirements |
+|-------|--------------|
+| Phase 1 | AGG-01, AGG-02, AGG-04, AGG-05, SRC-01, SRC-02, SRC-03, SRC-07, SRC-08, CACHE-01, CACHE-02, CACHE-03, CACHE-04, API-01, API-02, API-04, API-05, DEPLOY-01, DEPLOY-02, DEPLOY-03, DEPLOY-04, QA-01 (22) |
+| Phase 2 | AGG-03, MOOD-01, MOOD-02, MOOD-03, API-03, UI-01, UI-02, UI-03, UI-04, UI-05, UI-07, QA-02 (12) |
+| Phase 3 | SRC-04, SRC-05, SRC-06, UI-06 (4) |
 
 ---
 *Requirements defined: 2026-06-26*
-*Last updated: 2026-06-26 after initial definition*
+*Last updated: 2026-06-26 after roadmap creation — traceability populated*

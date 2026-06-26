@@ -14,7 +14,10 @@
  *   - Min-results guard: fewer than 2 events on a page throws ParseError
  */
 
-import * as cheerio from 'cheerio';
+// cheerio/slim excludes the undici-backed fromURL helper (unused here); the full
+// 'cheerio' entry statically imports undici, whose lazy internal require() breaks
+// inside the single-file esbuild --format=cjs bundle (boot-time MODULE_NOT_FOUND).
+import * as cheerio from 'cheerio/slim';
 import { createHash } from 'node:crypto';
 import type { NormalizedEvent, EventCategory } from '../../types/events';
 import { parseRussianDate } from '../../utils/date';

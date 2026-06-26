@@ -13,7 +13,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **AGG-02**: Каждое событие несёт флаг `isSeed` (live vs seed/demo) — структурно невозможно выдать seed за live
 - [ ] **AGG-03**: Дубликаты одного события из разных источников схлопываются по нечёткому ключу (нормализованный title + день startDate + нормализованный venue)
 - [x] **AGG-04**: Общие утилиты парсинга русских дат (`Asia/Yekaterinburg`, «сегодня/завтра», русские месяцы) и цен («от 500 ₽», «бесплатно») покрыты тестами
-- [ ] **AGG-05**: Min-results guard — пустой результат при HTTP 200 трактуется как ошибка парсинга и не перезаписывает валидный кэш
+- [x] **AGG-05**: Min-results guard — пустой результат при HTTP 200 трактуется как ошибка парсинга и не перезаписывает валидный кэш
 
 ### Sources (SRC)
 
@@ -24,13 +24,13 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SRC-05**: Парсер `sur.kassir.ru` (🟡 YELLOW, AJAX) — концерты/театр
 - [ ] **SRC-06**: Парсер `afisha.yandex.ru/surgut` (🟡 YELLOW, риск ToS) под конфиг-тогглом, по умолчанию выключен
 - [x] **SRC-07**: Парсинг уважает robots.txt и crawl-delay; вежливые таймауты/ретраи/User-Agent
-- [ ] **SRC-08**: Статус каждого источника (live / cached / blocked / error) отслеживается и отдаётся
+- [x] **SRC-08**: Статус каждого источника (live / cached / blocked / error) отслеживается и отдаётся
 
 ### Caching & Resilience (CACHE)
 
 - [ ] **CACHE-01**: Результаты парсинга кэшируются в JSON-файл на диске с TTL и переживают рестарт
-- [ ] **CACHE-02**: Фоновое обновление по расписанию (cron) вне пути запроса; запросы читают из in-memory индекса
-- [ ] **CACHE-03**: При падении источника отдаются последние валидные кэшированные данные (serve-stale-on-failure)
+- [x] **CACHE-02**: Фоновое обновление по расписанию (cron) вне пути запроса; запросы читают из in-memory индекса
+- [x] **CACHE-03**: При падении источника отдаются последние валидные кэшированные данные (serve-stale-on-failure)
 - [ ] **CACHE-04**: Честный fallback seed из реально найденных примеров, всегда помеченный как cached/demo, доступен при пустом/недоступном live
 
 ### API (API)
@@ -105,7 +105,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AGG-02 | Phase 1 | Complete |
 | AGG-03 | Phase 2 | Pending |
 | AGG-04 | Phase 1 | Complete |
-| AGG-05 | Phase 1 | Pending |
+| AGG-05 | Phase 1 | Complete |
 | SRC-01 | Phase 1 | Complete |
 | SRC-02 | Phase 1 | Pending |
 | SRC-03 | Phase 1 | Pending |
@@ -113,10 +113,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRC-05 | Phase 3 | Pending |
 | SRC-06 | Phase 3 | Pending |
 | SRC-07 | Phase 1 | Complete |
-| SRC-08 | Phase 1 | Pending |
+| SRC-08 | Phase 1 | Complete |
 | CACHE-01 | Phase 1 | Pending |
-| CACHE-02 | Phase 1 | Pending |
-| CACHE-03 | Phase 1 | Pending |
+| CACHE-02 | Phase 1 | Complete |
+| CACHE-03 | Phase 1 | Complete |
 | CACHE-04 | Phase 1 | Pending |
 | API-01 | Phase 1 | Complete |
 | API-02 | Phase 1 | Pending |

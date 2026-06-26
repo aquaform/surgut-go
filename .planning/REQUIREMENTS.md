@@ -35,7 +35,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### API (API)
 
-- [ ] **API-01**: `GET /health` → 200 и тело `ok`
+- [x] **API-01**: `GET /health` → 200 и тело `ok`
 - [ ] **API-02**: `GET /api/events` → нормализованные события (с поддержкой фильтров-параметров)
 - [ ] **API-03**: `GET /api/recommendations?mood=drink|dance|learn|music` → ранжированные рекомендации по настроению
 - [ ] **API-04**: `GET /api/sources/status` → статус и свежесть каждого источника
@@ -59,8 +59,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Deploy (DEPLOY)
 
-- [ ] **DEPLOY-01**: Рабочий Dockerfile: `node:20-slim`, слушает `0.0.0.0`, порт из `PORT` (дефолт 3000), healthcheck без wget/curl
-- [ ] **DEPLOY-02**: Сервер стартует мгновенно на seed-данных (healthcheck проходит в start-period), парсинг — в фоне
+- [x] **DEPLOY-01**: Рабочий Dockerfile: `node:20-slim`, слушает `0.0.0.0`, порт из `PORT` (дефолт 3000), healthcheck без wget/curl
+- [x] **DEPLOY-02**: Сервер стартует мгновенно на seed-данных (healthcheck проходит в start-period), парсинг — в фоне
 - [ ] **DEPLOY-03**: GitHub-репозиторий создан, origin добавлен, main запушен
 - [ ] **DEPLOY-04**: Публичный деплой на `https://surgut-go.apps.sielom.ru` через `/deploy` (Dokploy); проверены `/health`, главная и хотя бы один API endpoint
 
@@ -118,7 +118,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CACHE-02 | Phase 1 | Pending |
 | CACHE-03 | Phase 1 | Pending |
 | CACHE-04 | Phase 1 | Pending |
-| API-01 | Phase 1 | Pending |
+| API-01 | Phase 1 | Complete |
 | API-02 | Phase 1 | Pending |
 | API-03 | Phase 2 | Pending |
 | API-04 | Phase 1 | Pending |
@@ -133,8 +133,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-05 | Phase 2 | Pending |
 | UI-06 | Phase 3 | Pending |
 | UI-07 | Phase 2 | Pending |
-| DEPLOY-01 | Phase 1 | Pending |
-| DEPLOY-02 | Phase 1 | Pending |
+| DEPLOY-01 | Phase 1 | Complete |
+| DEPLOY-02 | Phase 1 | Complete |
 | DEPLOY-03 | Phase 1 | Pending |
 | DEPLOY-04 | Phase 1 | Pending |
 | QA-01 | Phase 1 | Complete |

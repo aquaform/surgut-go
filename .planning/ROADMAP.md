@@ -33,8 +33,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-1-PLAN.md — Scaffold project + domain contracts + Wave-0 live-source selector discovery
 - [x] 01-2-PLAN.md — Russian date/price utilities (TDD) + polite HTTP fetch + robots compliance
-- [ ] 01-3-PLAN.md — Honest seed fallback + durable JSON cache store + in-memory EventIndex
-- [ ] 01-4-PLAN.md — Boot-first Fastify server + /health + esbuild multi-stage Dockerfile (deployable skeleton)
+- [x] 01-3-PLAN.md — Honest seed fallback + durable JSON cache store + in-memory EventIndex
+- [x] 01-4-PLAN.md — Boot-first Fastify server + /health + esbuild multi-stage Dockerfile (deployable skeleton)
 - [ ] 01-5-PLAN.md — Parallel scrape pipeline (error isolation, min-results, serve-stale) + cron refresh loop
 - [ ] 01-6-PLAN.md — API routes: /api/events (filters + Ajv) and /api/sources/status
 - [ ] 01-7-PLAN.md — kassa-ugra.ru + afisha.surguta.ru GREEN adapters (fixture-tested) + registry wiring
@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Deployable Pipeline & Green Sources | 2/8 | In Progress|  |
+| 1. Deployable Pipeline & Green Sources | 4/8 | In Progress|  |
 | 2. Core Product UI & Mood Recommendations | 0/TBD | Not started | - |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

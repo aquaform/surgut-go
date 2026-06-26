@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 01-3-PLAN.md: seed adapter, CacheStore (atomic+TTL+seed fallback), EventIndex. Next: 01-4"
-last_updated: "2026-06-27T01:22:00.000Z"
-last_activity: 2026-06-27
+stopped_at: Completed 01-4-PLAN.md
+last_updated: "2026-06-26T20:37:57.411Z"
+last_activity: 2026-06-26
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 8
-  completed_plans: 3
-  percent: 37
+  completed_plans: 4
+  percent: 0
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 01 (deployable-pipeline-green-sources) — EXECUTING
-Plan: 3 of 8
+Plan: 4 of 8
 Status: Ready to execute
 Last activity: 2026-06-26
 
-Progress: [███░░░░░░░] 37%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Progress: [███░░░░░░░] 37%
 | Phase 01-deployable-pipeline-green-sources P01-1 | 19min | 3 tasks | 13 files |
 | Phase 01-deployable-pipeline-green-sources P01-2 | 3min | 3 tasks | 6 files |
 | Phase 01-deployable-pipeline-green-sources P01-3 | 12min | 3 tasks | 8 files |
+| Phase 01 P01-4 | 20 | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase ?]: afisha.surguta.ru charset is UTF-8 not windows-1251 — Pitfall 10 resolved; no TextDecoder needed
 - [Phase ?]: tsconfig moduleResolution: bundler permits extensionless relative imports throughout the project
 - [Phase ?]: @types/robots-parser does not exist on npm — robots-parser ships its own TS types (confirmed)
+- [Phase ?]: FastifyInstance module augmentation in server.ts: typed store/index decorations
+- [Phase ?]: Boot-first main(): listen() completes before any scrape fires — DEPLOY-02 satisfied
+- [Phase ?]: Dockerfile two-stage esbuild was pre-implemented in 01-1; Task 3 was verification-only
 
 ### Pending Todos
 
@@ -95,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-27T01:22:00.000Z
-Stopped at: Completed 01-3-PLAN.md: seed adapter, CacheStore (atomic+TTL+seed fallback), EventIndex. Next: 01-4
+Last session: 2026-06-26T20:37:57.405Z
+Stopped at: Completed 01-4-PLAN.md
 Resume file: None

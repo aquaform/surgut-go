@@ -17,6 +17,8 @@ import { CacheStore } from './cache/store';
 import { buildEventIndex } from './pipeline/index-events';
 import { createServer } from './http/server';
 import { seedAdapter } from './sources/seed/index';
+import { sourceRegistry } from './sources/registry';
+import { startRefreshLoop } from './cache/refresh';
 
 async function main(): Promise<void> {
   // Step 1: Load typed config from environment variables
@@ -39,9 +41,11 @@ async function main(): Promise<void> {
   await fastify.listen({ port: config.port, host: '0.0.0.0' });
   fastify.log.info(`Server ready on port ${config.port}`);
 
-  // Step 5: Background refresh loop extension point (plan 01-5).
-  // startRefreshLoop({ store, index, registry: sourceRegistry, config }) goes here.
-  // It MUST be fire-and-forget — never await a scrape before listen() above.
+  // Step 5: Background refresh loop (CACHE-02).
+  // Called AFTER listen() — never blocks boot. startRefreshLoop is fire-and-forget:
+  // it fires an immediate refresh and schedules periodic refresh via node-cron.
+  // A refresh failure logs a warning and never crashes the process (serve-stale).
+  startRefreshLoop({ store, index, registry: sourceRegistry, config });
 }
 
 main().catch((err: unknown) => {

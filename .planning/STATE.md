@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Completed 01-4-PLAN.md
-last_updated: "2026-06-26T20:49:06.712Z"
+last_updated: "2026-06-26T21:11:40.096Z"
 last_activity: 2026-06-26
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 8
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 01 (deployable-pipeline-green-sources) — EXECUTING
-Plan: 5 of 8
+Plan: 6 of 8
 Status: Ready to execute
 Last activity: 2026-06-26
 
-Progress: [██████░░░░] 63%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
@@ -57,6 +57,7 @@ Progress: [██████░░░░] 63%
 | Phase 01-deployable-pipeline-green-sources P01-3 | 12min | 3 tasks | 8 files |
 | Phase 01 P01-4 | 20 | 3 tasks | 4 files |
 | Phase 01 P01-5 | 7 | 3 tasks | 5 files |
+| Phase 01-deployable-pipeline-green-sources P01-6 | 25min | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [Phase ?]: FastifyInstance module augmentation in server.ts: typed store/index decorations
 - [Phase ?]: Boot-first main(): listen() completes before any scrape fires — DEPLOY-02 satisfied
 - [Phase ?]: Dockerfile two-stage esbuild was pre-implemented in 01-1; Task 3 was verification-only
+- [Phase ?]: Ajv querystring schema rejects invalid enum values with 400 FST_ERR_VALIDATION on events route
+- [Phase ?]: filterByDate in events route uses surgutDayBoundaryMs for UTC+5 (Asia/Yekaterinburg) date filtering
+- [Phase ?]: sources/status route exposes human-readable error only — no stack traces or internal URLs (T-01-14 mitigated)
 
 ### Pending Todos
 
@@ -100,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-26T20:49:06.706Z
+Last session: 2026-06-26T21:08:57.602Z
 Stopped at: Completed 01-4-PLAN.md
 Resume file: None

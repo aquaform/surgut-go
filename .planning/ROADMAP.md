@@ -36,7 +36,7 @@ Plans:
 - [x] 01-3-PLAN.md — Honest seed fallback + durable JSON cache store + in-memory EventIndex
 - [x] 01-4-PLAN.md — Boot-first Fastify server + /health + esbuild multi-stage Dockerfile (deployable skeleton)
 - [x] 01-5-PLAN.md — Parallel scrape pipeline (error isolation, min-results, serve-stale) + cron refresh loop
-- [ ] 01-6-PLAN.md — API routes: /api/events (filters + Ajv) and /api/sources/status
+- [x] 01-6-PLAN.md — API routes: /api/events (filters + Ajv) and /api/sources/status
 - [ ] 01-7-PLAN.md — kassa-ugra.ru + afisha.surguta.ru GREEN adapters (fixture-tested) + registry wiring
 - [ ] 01-8-PLAN.md — Quality gate + GitHub repo (push main) + operator /deploy to surgut-go.apps.sielom.ru
 
@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Deployable Pipeline & Green Sources | 5/8 | In Progress|  |
+| 1. Deployable Pipeline & Green Sources | 6/8 | In Progress|  |
 | 2. Core Product UI & Mood Recommendations | 0/TBD | Not started | - |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

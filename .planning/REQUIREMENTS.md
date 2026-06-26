@@ -36,10 +36,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### API (API)
 
 - [x] **API-01**: `GET /health` → 200 и тело `ok`
-- [ ] **API-02**: `GET /api/events` → нормализованные события (с поддержкой фильтров-параметров)
+- [x] **API-02**: `GET /api/events` → нормализованные события (с поддержкой фильтров-параметров)
 - [ ] **API-03**: `GET /api/recommendations?mood=drink|dance|learn|music` → ранжированные рекомендации по настроению
-- [ ] **API-04**: `GET /api/sources/status` → статус и свежесть каждого источника
-- [ ] **API-05**: Ответы API валидируются схемами; ошибки отдаются в предсказуемом формате
+- [x] **API-04**: `GET /api/sources/status` → статус и свежесть каждого источника
+- [x] **API-05**: Ответы API валидируются схемами; ошибки отдаются в предсказуемом формате
 
 ### Recommendations (MOOD)
 
@@ -119,10 +119,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CACHE-03 | Phase 1 | Complete |
 | CACHE-04 | Phase 1 | Pending |
 | API-01 | Phase 1 | Complete |
-| API-02 | Phase 1 | Pending |
+| API-02 | Phase 1 | Complete |
 | API-03 | Phase 2 | Pending |
-| API-04 | Phase 1 | Pending |
-| API-05 | Phase 1 | Pending |
+| API-04 | Phase 1 | Complete |
+| API-05 | Phase 1 | Complete |
 | MOOD-01 | Phase 2 | Pending |
 | MOOD-02 | Phase 2 | Pending |
 | MOOD-03 | Phase 2 | Pending |

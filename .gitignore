@@ -8,3 +8,4 @@ dist
 server.js
 /cache/
 coverage/
+.cache-test*/

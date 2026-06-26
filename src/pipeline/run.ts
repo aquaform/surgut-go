@@ -101,11 +101,13 @@ export async function runPipeline(
     if (result.status === 'fulfilled') {
       const events = result.value;
       allEvents.push(...events);
+      // Seed adapter must not report 'live' — honest status required (AGG-02, CACHE-04)
+      const status = adapter.name === 'seed' ? 'seed' : 'live';
       sources.push({
         name: adapter.name,
         displayName: adapter.displayName,
         homeUrl: adapter.homeUrl,
-        status: 'live',
+        status,
         eventCount: events.length,
         fetchedAt: now,
       });

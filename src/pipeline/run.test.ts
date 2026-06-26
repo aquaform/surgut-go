@@ -136,6 +136,19 @@ describe('runPipeline', () => {
     expect(src?.error).not.toContain('.js:');
   });
 
+  it('seed adapter reports status "seed" not "live" (honest source status, AGG-02)', async () => {
+    const seedEvents = [makeEvent('seed', 's1'), makeEvent('seed', 's2')].map((e) => ({
+      ...e,
+      isSeed: true,
+    }));
+    const adapter = makeAdapter('seed', 5000, async () => seedEvents);
+
+    const result = await runPipeline([adapter]);
+    const src = result.sources.find((s) => s.name === 'seed');
+    expect(src?.status).toBe('seed');
+    expect(src?.status).not.toBe('live');
+  });
+
   it('withTimeout: slow adapter (exceeds timeoutMs) is treated as error', async () => {
     const slowAdapter: SourceAdapter = {
       name: 'slow',

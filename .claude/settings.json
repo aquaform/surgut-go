@@ -1,1 +1,38 @@
-{\n  \"permissions\": {\n    \"allow\": [\n      \"Read\", \"Edit\", \"Write\",\n      \"Bash(git *)\", \"Bash(npm *)\", \"Bash(npx *)\",\n      \"Bash(date)\", \"Bash(ls *)\", \"Bash(cat *)\", \"Bash(mkdir *)\"\n    ],\n    \"ask\": [],\n    \"deny\": [\n      \"Read(.env)\", \"Read(**/secrets/**)\",\n      \"Bash(rm -rf *)\", \"Bash(git push --force*)\"\n    ]\n  },\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"matcher\": \"Bash\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"if echo \\\"$CLAUDE_TOOL_INPUT\\\" | grep -qE 'rm -rf|git push.*--force'; then echo 'Заблокировано политикой проекта' && exit 2; fi\"\n          }\n        ]\n      }\n    ]\n  }\n}\n
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(curl *)",
+      "Bash(date)",
+      "Bash(mkdir *)",
+      "Bash(cp *)"
+    ],
+    "ask": [],
+    "deny": [
+      "Read(.env)",
+      "Read(**/secrets/**)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -qE 'rm -rf|git push.*--force'; then echo 'Заблокировано политикой проекта' && exit 2; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

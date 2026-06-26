@@ -1,1 +1,7 @@
-node_modules\n.env\n.claude/settings.local.json\n.planning/secrets\n
+node_modules
+dist
+.env
+.env.local
+.claude/settings.local.json
+.planning/secrets
+*.log

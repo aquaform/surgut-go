@@ -65,8 +65,10 @@ export const MOOD_MAPPINGS: Record<Mood, MoodMapping> = {
       'театр', 'спектакл', 'мюзикл', 'опер', 'балет',
     ],
     venueKeywords: [
-      'музей', 'библиотек', 'парк', 'театр', 'галере',
-      'исторический', 'краеведческ',
+      // NB: do NOT use bare 'парк' — "аквапарк".includes("парк") is true and would
+      // pull pool-party events into "learn". Use the specific 'исторический парк'.
+      'музей', 'библиотек', 'театр', 'галере',
+      'исторический парк', 'краеведческ',
     ],
     label: 'Хочу понимать',
     emoji: '🧠',

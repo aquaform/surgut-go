@@ -96,6 +96,15 @@ describe('isEventMatchForMood', () => {
     expect(isEventMatchForMood(event, MOOD_MAPPINGS.dance)).toBe(true);
   });
 
+  it('does NOT match an aquapark pool party to learn (regression: bare "парк" substring)', () => {
+    const event = makeEvent({
+      category: 'other',
+      title: 'Вечеринка в аквапарке',
+      venue: 'Аквапарк «Аквамарин»',
+    });
+    expect(isEventMatchForMood(event, learnMapping)).toBe(false);
+  });
+
   it('does not match when no category/title/venue match', () => {
     const event = makeEvent({
       category: 'sport',

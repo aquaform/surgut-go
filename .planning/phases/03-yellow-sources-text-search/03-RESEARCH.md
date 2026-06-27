@@ -846,7 +846,12 @@ This phase is code/config-only changes — no new external tool dependencies. Al
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
+
+<!-- RESOLVED: all three resolved inline below and implemented in the Phase 3 plans:
+Accept-Language header → set on yandex fetch; kassir shown as blocked in /api/sources/status;
+search input lives inside #filters (shown after mood tap). -->
+
 
 1. **Does the afisha.ru /surgut/events/ path require Accept-Language: ru-RU?**
    - Prior PITFALLS.md notes: "Fetching with Accept-Language: en can trigger different page structure"

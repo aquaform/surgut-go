@@ -103,7 +103,7 @@ From public/index.html — #filters section contains .chips then .filter-row; re
     - `node --check public/app.js` passes; `.search-input` rule present in public/app.css
   </acceptance_criteria>
   <verify>
-    <automated>node --check public/app.js && grep -q "search-input" public/index.html && grep -c "searchQuery" public/app.js && grep -q "search-input" public/app.css</automated>
+    <automated>node --check public/app.js && grep -q "search-input" public/index.html && [ "$(grep -c "searchQuery" public/app.js)" -ge 4 ] && grep -q "search-input" public/app.css</automated>
   </verify>
   <done>A keyword search input filters visible cards over title+venue+reason+tags, case-insensitive, no reload/network, and resets on mood change.</done>
 </task>

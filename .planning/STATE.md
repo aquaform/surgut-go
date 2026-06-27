@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy"
-last_updated: "2026-06-27T10:43:14Z"
+stopped_at: "03-5 human-verify checkpoint — UX-01 date fix + UI-06 search automated tasks done; awaiting visual verification"
+last_updated: "2026-06-27T10:47:49Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 3
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 03 (yellow-sources-text-search) — EXECUTING
-Plan: 4 of 5
-Status: Ready to execute
+Plan: 5 of 5
+Status: Awaiting human-verify checkpoint (Task 3 of 03-5)
 Last activity: 2026-06-27
 
 Progress: [█████████░] 88%
@@ -66,6 +66,7 @@ Progress: [█████████░] 88%
 | Phase 03 P03-1 | 185 | 2 tasks | 4 files |
 | Phase 03-yellow-sources-text-search P2 | 45 | 2 tasks | 3 files |
 | Phase 03-yellow-sources-text-search P3 | 30 | 2 tasks | 5 files |
+| Phase 03-yellow-sources-text-search P5 | 10 | 2 tasks (human-verify pending) | 3 files |
 
 ## Accumulated Context
 
@@ -122,6 +123,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-27T10:43:14Z
-Stopped at: 03-3 complete — kassir-sur stub + yandex-afisha adapter done; ready for 03-4 (registry wiring)
+Last session: 2026-06-27T10:47:49Z
+Stopped at: 03-5 Task 3 (checkpoint:human-verify) — UX-01 humanizeDate fix (532fd0c) + UI-06 keyword search (75d230a) committed; awaiting /deploy + visual verification
 Resume file: None

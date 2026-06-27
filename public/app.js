@@ -110,6 +110,19 @@ function applyFilters() {
     if (freeOnly && !e.isFree) return false;
     if (activeCategory && e.category !== activeCategory) return false;
 
+    // UI-06: keyword search (case-insensitive Russian, no extra network).
+    // Evaluated BEFORE the date-chip early-returns so search applies on the
+    // default "Все" view too (not only when a date chip is active).
+    if (searchQuery) {
+      var haystack = [
+        e.title,
+        e.venue,
+        item.reason,
+        e.tags.join(' '),
+      ].join(' ').toLowerCase();
+      if (haystack.indexOf(searchQuery) === -1) return false;
+    }
+
     if (!activeDateChip) return true;
 
     var dStr = surgutDate(e.startDate).toISOString().slice(0, 10);
@@ -121,17 +134,6 @@ function applyFilters() {
     if (activeDateChip === 'week') {
       var eventMs = new Date(e.startDate).getTime();
       return eventMs >= now && eventMs < now + 7 * 86400000;
-    }
-
-    // UI-06: keyword search (case-insensitive Russian, no extra network)
-    if (searchQuery) {
-      var haystack = [
-        e.title,
-        e.venue,
-        item.reason,
-        e.tags.join(' '),
-      ].join(' ').toLowerCase();
-      if (haystack.indexOf(searchQuery) === -1) return false;
     }
 
     return true;

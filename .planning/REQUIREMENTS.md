@@ -11,7 +11,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **AGG-01**: Сервер парсит публичные источники и нормализует события в единую модель (`title, startDate, endDate?, venue, address?, priceText, sourceName, sourceUrl, category, tags, ageLimit?, imageUrl?`)
 - [x] **AGG-02**: Каждое событие несёт флаг `isSeed` (live vs seed/demo) — структурно невозможно выдать seed за live
-- [ ] **AGG-03**: Дубликаты одного события из разных источников схлопываются по нечёткому ключу (нормализованный title + день startDate + нормализованный venue)
+- [x] **AGG-03**: Дубликаты одного события из разных источников схлопываются по нечёткому ключу (нормализованный title + день startDate + нормализованный venue)
 - [x] **AGG-04**: Общие утилиты парсинга русских дат (`Asia/Yekaterinburg`, «сегодня/завтра», русские месяцы) и цен («от 500 ₽», «бесплатно») покрыты тестами
 - [x] **AGG-05**: Min-results guard — пустой результат при HTTP 200 трактуется как ошибка парсинга и не перезаписывает валидный кэш
 
@@ -67,7 +67,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Quality (QA)
 
 - [x] **QA-01**: lint + typecheck + build проходят; типы на всех публичных функциях
-- [ ] **QA-02**: vitest-тесты бизнес-логики (парсеры на фикстурах, дедуп, маппинг настроений, дата/цена) — цель 80%+ покрытия
+- [x] **QA-02**: vitest-тесты бизнес-логики (парсеры на фикстурах, дедуп, маппинг настроений, дата/цена) — цель 80%+ покрытия
 
 ## v2 Requirements
 
@@ -103,7 +103,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | AGG-01 | Phase 1 | Complete |
 | AGG-02 | Phase 1 | Complete |
-| AGG-03 | Phase 2 | Pending |
+| AGG-03 | Phase 2 | Complete |
 | AGG-04 | Phase 1 | Complete |
 | AGG-05 | Phase 1 | Complete |
 | SRC-01 | Phase 1 | Complete |
@@ -138,7 +138,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEPLOY-03 | Phase 1 | Complete |
 | DEPLOY-04 | Phase 1 | Complete |
 | QA-01 | Phase 1 | Complete |
-| QA-02 | Phase 2 | Pending |
+| QA-02 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 38 total (note: file previously stated 33; actual count is 38)

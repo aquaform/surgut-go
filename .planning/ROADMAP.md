@@ -63,13 +63,19 @@ Plans:
 **Goal**: Event coverage is expanded with three YELLOW source adapters added cautiously with documented guards, and users can search events by keyword.
 **Mode:** mvp
 **Depends on**: Phase 2
-**Requirements**: SRC-04, SRC-05, SRC-06, UI-06
+**Requirements**: SRC-04, SRC-05, SRC-06, UI-06 (+ folded-in UX-01 date-only time fix per user request)
 **Success Criteria** (what must be TRUE):
   1. Events from afisha.ru/surgut appear in `/api/events` with correct source attribution; a parse failure (HTTP 200 but fewer than 2 events returned) logs a `parseError` and does not overwrite the existing cache
-  2. Events from sur.kassir.ru (minimum 10 events) appear in results; AJAX pagination is handled via direct endpoint discovery or date-filtered URLs — no Playwright or headless browser is used
-  3. The afisha.yandex.ru adapter is disabled by default (`enabled: false` in source config with `tosRisk: true` documented); enabling it via config toggle adds Yandex events; an HTTP 403 response marks the source as `blocked` without crashing the refresh loop
+  2. sur.kassir.ru is handled honestly without a headless browser. Live probe (2026-06-27) proved it is fully client-rendered — 0 events in static HTML across all category pages, no public API. The "minimum 10 events" target is unattainable under the node:20-slim / no-headless constraint, so kassir ships as a transparent disabled stub (`enabled: false` + documented reason, surfaced as `blocked` in `/api/sources/status`). This is a constraint-driven honest outcome, not a hidden failure; the source is deferred to v2.
+  3. The afisha.yandex.ru adapter is disabled by default (`enabled: false` in source config with `tosRisk: true` documented); enabling it via the `ENABLE_YANDEX_AFISHA` config toggle adds Yandex events; an HTTP 403 response marks the source as `blocked` without crashing the refresh loop
   4. Text search in the UI filters visible event cards by keyword (case-insensitive, Russian locale) without a page reload
-**Plans**: TBD
+**Plans**: 5 plans (3 waves)
+Plans:
+- [ ] 03-1-PLAN.md — Date + model foundation: parseDateFull + Format 3/4 + optional hasTime on model/serializer (UX-01 backend; enables SRC-04/06) [Wave 1]
+- [ ] 03-2-PLAN.md — afisha.ru/surgut YELLOW adapter, href-pattern selectors + min-results guard, fixture-tested (SRC-04) [Wave 2]
+- [ ] 03-3-PLAN.md — kassir-sur honest disabled stub (SRC-05) + yandex-afisha disabled-by-default adapter (SRC-06), fixture-tested [Wave 2]
+- [ ] 03-5-PLAN.md — UI: humanizeDate date-only fix (UX-01) + client-side keyword search (UI-06) [Wave 2]
+- [ ] 03-4-PLAN.md — Integration: register afisha-ru, disabledSources→blocked, 403→blocked mapping, ENABLE_YANDEX_AFISHA toggle, quality gate (SRC-04/05/06) [Wave 3]
 **UI hint**: yes
 
 ## Progress
@@ -81,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
 | 2. Core Product UI & Mood Recommendations | 4/4 | Complete   | 2026-06-27 |
-| 3. Yellow Sources & Text Search | 0/TBD | Not started | - |
+| 3. Yellow Sources & Text Search | 0/5 | Planned | - |

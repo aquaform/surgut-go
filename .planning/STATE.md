@@ -4,14 +4,14 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: "01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy"
-last_updated: "2026-06-27T10:13:00.308Z"
+last_updated: "2026-06-27T10:43:14Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 3
   completed_phases: 2
   total_plans: 17
-  completed_plans: 14
-  percent: 67
+  completed_plans: 15
+  percent: 88
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 03 (yellow-sources-text-search) — EXECUTING
-Plan: 3 of 5
+Plan: 4 of 5
 Status: Ready to execute
 Last activity: 2026-06-27
 
-Progress: [████████░░] 82%
+Progress: [█████████░] 88%
 
 ## Performance Metrics
 
@@ -65,6 +65,7 @@ Progress: [████████░░] 82%
 | Phase 02 P3 | 11 | 3 tasks | 8 files |
 | Phase 03 P03-1 | 185 | 2 tasks | 4 files |
 | Phase 03-yellow-sources-text-search P2 | 45 | 2 tasks | 3 files |
+| Phase 03-yellow-sources-text-search P3 | 30 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,9 @@ Recent decisions affecting current work:
 - [Phase ?]: parseDateFull is canonical; parseRussianDate() delegates for backward compat
 - [Phase ?]: Format 3/4 checked before Format 2 in parseDateFull to prevent regex swallowing explicit times (Pitfall 3)
 - [Phase ?]: hasTime optional on NormalizedEvent; undefined = unknown; backward compat for existing adapters + cached data
+- [03-3]: kassir-sur ships as honest disabled stub (enabled:false + reason + throw) — never scrapes, never invents events
+- [03-3]: yandex-afisha carousel dedup by slug; Format 4 "DD месяца, HH:MM" → parseDateFull → hasTime:true
+- [03-3]: 403→tagged rethrow pattern: if err.message.includes('403') → throw new Error('HTTP 403 — source blocked')
 
 ### Pending Todos
 
@@ -112,12 +116,12 @@ None yet.
 | Category | Item | Status | Deferred At |
 |----------|------|--------|-------------|
 | Source | tbank.ru (CSR, needs headless) | v2+ | Research 2026-06-26 |
-| Source | afisha.yandex.ru (ToS risk) | Phase 3, disabled-by-default | Research 2026-06-26 |
+| Source | afisha.yandex.ru (ToS risk) | Implemented disabled-by-default (03-3) | Research 2026-06-26 |
 | Feature | Accounts / favorites / personalization | v2+ | Project init |
 | Feature | Geolocation / map view | v2+ | Project init |
 
 ## Session Continuity
 
-Last session: 2026-06-27T10:12:56.855Z
-Stopped at: 01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy
+Last session: 2026-06-27T10:43:14Z
+Stopped at: 03-3 complete — kassir-sur stub + yandex-afisha adapter done; ready for 03-4 (registry wiring)
 Resume file: None

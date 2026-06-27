@@ -73,7 +73,7 @@ Plans:
 Plans:
 - [x] 03-1-PLAN.md — Date + model foundation: parseDateFull + Format 3/4 + optional hasTime on model/serializer (UX-01 backend; enables SRC-04/06) [Wave 1]
 - [x] 03-2-PLAN.md — afisha.ru/surgut YELLOW adapter, href-pattern selectors + min-results guard, fixture-tested (SRC-04) [Wave 2]
-- [ ] 03-3-PLAN.md — kassir-sur honest disabled stub (SRC-05) + yandex-afisha disabled-by-default adapter (SRC-06), fixture-tested [Wave 2]
+- [x] 03-3-PLAN.md — kassir-sur honest disabled stub (SRC-05) + yandex-afisha disabled-by-default adapter (SRC-06), fixture-tested [Wave 2]
 - [ ] 03-5-PLAN.md — UI: humanizeDate date-only fix (UX-01) + client-side keyword search (UI-06) [Wave 2]
 - [ ] 03-4-PLAN.md — Integration: register afisha-ru, disabledSources→blocked, 403→blocked mapping, ENABLE_YANDEX_AFISHA toggle, quality gate (SRC-04/05/06) [Wave 3]
 **UI hint**: yes

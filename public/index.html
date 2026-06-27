@@ -4,18 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Куда пойти в Сургуте</title>
-  <style>
-    body { font-family: sans-serif; max-width: 640px; margin: 48px auto; padding: 0 16px; }
-    h1   { font-size: 1.6rem; }
-    a    { color: #0057b7; }
-  </style>
+  <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-  <h1>Куда пойти в Сургуте</h1>
-  <p>Агрегатор городских мероприятий. API сейчас в разработке.</p>
-  <ul>
-    <li><a href="/health">GET /health</a> — liveness probe</li>
-    <li><a href="/api/events">GET /api/events</a> — список мероприятий (скоро)</li>
-  </ul>
+  <header class="header">
+    <h1 class="header__title">Куда пойти<br>в Сургуте</h1>
+    <p class="header__sub">Выбери настроение:</p>
+  </header>
+
+  <!-- UI-02: 4 mood buttons -->
+  <section class="moods" aria-label="Выбор настроения">
+    <button class="mood-btn" data-mood="drink">🍸<span>Выпить</span></button>
+    <button class="mood-btn" data-mood="dance">💃<span>Потанцевать</span></button>
+    <button class="mood-btn" data-mood="learn">🧠<span>Понимать</span></button>
+    <button class="mood-btn" data-mood="music">🎶<span>Музыка</span></button>
+  </section>
+
+  <!-- UI-04: date filter chips (shown after mood tap) -->
+  <section class="filters hidden" id="filters">
+    <div class="chips" role="group" aria-label="Фильтр по дате">
+      <button class="chip chip--active" data-date="">Все</button>
+      <button class="chip" data-date="today">Сегодня</button>
+      <button class="chip" data-date="tomorrow">Завтра</button>
+      <button class="chip" data-date="weekend">Выходные</button>
+      <button class="chip" data-date="week">7 дней</button>
+    </div>
+    <!-- UI-05: free toggle + category filter -->
+    <div class="filter-row">
+      <label class="toggle">
+        <input type="checkbox" id="free-toggle"> Только бесплатные
+      </label>
+      <select id="category-filter" aria-label="Категория">
+        <option value="">Все категории</option>
+        <option value="concert">Концерты</option>
+        <option value="theater">Театр</option>
+        <option value="club">Клубы</option>
+        <option value="exhibition">Выставки</option>
+        <option value="lecture">Лекции</option>
+        <option value="standup">Стендап</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Results area -->
+  <main id="results">
+    <!-- Loading, empty, and card states rendered by app.js -->
+  </main>
+
+  <!-- UI-07: source status panel -->
+  <details class="sources" id="source-panel">
+    <summary class="sources__toggle">Источники данных</summary>
+    <ul class="sources__list" id="source-list">
+      <!-- Rendered by app.js on load -->
+    </ul>
+  </details>
+
+  <script src="/app.js"></script>
 </body>
 </html>

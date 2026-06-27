@@ -1,11 +1,18 @@
 /**
  * Russian date parsing utilities for Surgut-based event sources.
  *
- * Handles all date formats observed in live kassa-ugra.ru and afisha.surguta.ru sources:
- *   Format 1 (kassa-ugra listing): "DD ммм HH:MM [Ч]" e.g. "6 сен 20:00 Вс"
+ * Handles all date formats observed in live kassa-ugra.ru, afisha.surguta.ru,
+ * afisha.ru, and afisha.yandex.ru sources:
+ *   Format 1 (kassa-ugra listing):  "DD ммм HH:MM [Ч]"      e.g. "6 сен 20:00 Вс"
+ *   Format 3 (afisha.ru):           "DD месяца в HH:MM"      e.g. "7 октября в 19:00"
+ *   Format 4 (afisha.yandex.ru):    "DD месяца, HH:MM"       e.g. "15 сентября, 19:00"
  *   Format 2 (afisha.surguta + kassa-ugra headers): "DD месяца [,] [YYYY]" e.g. "15 апреля 2026"
  *   Range (afisha.surguta exhibitions): "DD месяца - DD месяца YYYY" → start date extracted
  *   Relative labels: "сегодня", "завтра"
+ *
+ * ORDERING IS CRITICAL: Formats 3 and 4 MUST be checked before Format 2.
+ * Format 2's optional-comma/optional-year regex would otherwise swallow the
+ * date portion of Format 3/4 strings and silently drop the explicit time.
  *
  * All dates with known local time are converted from Surgut local (UTC+5) to UTC.
  * Dates without a known time are stored as UTC midnight on the same calendar date.
@@ -32,15 +39,34 @@ export const RU_MONTHS: Record<string, number> = {
 export const SURGUT_UTC_OFFSET = 5;
 
 /**
- * Parse a Russian-language date string and return a UTC Date.
+ * Result of parseDateFull — date plus an explicit hasTime flag.
+ */
+export interface ParsedDate {
+  date: Date;
+  /**
+   * true  → source string contained an explicit HH:MM time (Formats 1, 3, 4).
+   * false → source gave a date only; date is stored at UTC midnight (Format 2,
+   *         relative labels, range start).  Absent/undefined means unknown
+   *         (e.g. cached data without the field); UI falls back to UTC-midnight
+   *         inference in that case.
+   */
+  hasTime: boolean;
+}
+
+/**
+ * Parse a Russian-language date string and return both the UTC Date and
+ * whether the source string carried an explicit time component.
  *
- * @param text  - Raw date string from source HTML (any observed format)
- * @param refYear - Reference year for date strings without an explicit year.
+ * Use in adapters that need to set NormalizedEvent.hasTime.
+ * Existing parseRussianDate() callers are unchanged — it delegates here.
+ *
+ * @param text    - Raw date string from source HTML (any observed format)
+ * @param refYear - Reference year for strings without an explicit year.
  *                  Defaults to the current UTC year.
- * @returns UTC Date on success, null on any unrecognized / unparseable input.
+ * @returns { date, hasTime } on success, null on any unrecognised input.
  *          Never throws.
  */
-export function parseRussianDate(text: string, refYear?: number): Date | null {
+export function parseDateFull(text: string, refYear?: number): ParsedDate | null {
   if (!text) return null;
 
   try {
@@ -59,7 +85,33 @@ export function parseRussianDate(text: string, refYear?: number): Date | null {
       const month = RU_MONTHS[mon.toLowerCase()];
       if (!month) return null;
       const resolvedYear = inferYear(+d, month, year);
-      return toUTC(resolvedYear, month, +d, +hh, +mm);
+      return { date: toUTC(resolvedYear, month, +d, +hh, +mm), hasTime: true };
+    }
+
+    // Format 3 (afisha.ru): "DD месяца в HH:MM" — "в" preposition before time
+    // e.g. "7 октября в 19:00", "23 октября в 19:00"
+    // MUST be before Format 2 — Format 2 would otherwise match the date part
+    // and silently drop the time component.
+    const m3 = startText.match(/^(\d{1,2})\s+([а-яёА-ЯЁ]+)\s+в\s+(\d{2}):(\d{2})/i);
+    if (m3) {
+      const [, d, mon, hh, mm] = m3;
+      const month = RU_MONTHS[mon.toLowerCase()];
+      if (!month) return null;
+      const resolvedYear = inferYear(+d, month, year);
+      return { date: toUTC(resolvedYear, month, +d, +hh, +mm), hasTime: true };
+    }
+
+    // Format 4 (afisha.yandex.ru): "DD месяца, HH:MM" — comma then time, no year
+    // e.g. "15 сентября, 19:00", "12 декабря, 19:00"
+    // MUST be before Format 2 — Format 2 matches "DD месяца," and treats the
+    // time as an unrecognised year → returns UTC midnight, losing the time.
+    const m4 = startText.match(/^(\d{1,2})\s+([а-яёА-ЯЁ]+),\s+(\d{2}):(\d{2})\b/i);
+    if (m4) {
+      const [, d, mon, hh, mm] = m4;
+      const month = RU_MONTHS[mon.toLowerCase()];
+      if (!month) return null;
+      const resolvedYear = inferYear(+d, month, year);
+      return { date: toUTC(resolvedYear, month, +d, +hh, +mm), hasTime: true };
     }
 
     // Format 2 (afisha.surguta listing + kassa-ugra section headers):
@@ -73,24 +125,46 @@ export function parseRussianDate(text: string, refYear?: number): Date | null {
       const resolvedYear = yr ? +yr : inferYear(+d, month, year);
       // For date-only (no time specified), store as UTC midnight on the same calendar date.
       // We do NOT apply the UTC+5 offset here because the exact start time is unknown.
-      return new Date(Date.UTC(resolvedYear, month - 1, +d, 0, 0, 0));
+      return {
+        date: new Date(Date.UTC(resolvedYear, month - 1, +d, 0, 0, 0)),
+        hasTime: false,
+      };
     }
 
     // Relative labels
     const lower = startText.toLowerCase().trim();
     if (lower === 'сегодня') {
-      return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
+      return {
+        date: new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0)),
+        hasTime: false,
+      };
     }
     if (lower === 'завтра') {
       const tomorrow = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0));
       tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
-      return tomorrow;
+      return { date: tomorrow, hasTime: false };
     }
 
     return null;
   } catch {
     return null;
   }
+}
+
+/**
+ * Parse a Russian-language date string and return a UTC Date.
+ *
+ * Delegates to parseDateFull() — signature and behavior are unchanged for all
+ * existing callers.
+ *
+ * @param text    - Raw date string from source HTML (any observed format)
+ * @param refYear - Reference year for date strings without an explicit year.
+ *                  Defaults to the current UTC year.
+ * @returns UTC Date on success, null on any unrecognized / unparseable input.
+ *          Never throws.
+ */
+export function parseRussianDate(text: string, refYear?: number): Date | null {
+  return parseDateFull(text, refYear)?.date ?? null;
 }
 
 /**

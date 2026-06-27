@@ -126,7 +126,7 @@ Project rules: types on all public functions; reads must come from fastify.index
   <done>Shared serializer extracted and reused; /api/events gains a non-breaking ?upcoming=true filter with tests.</done>
 </task>
 
-<task type="auto" tdd="true">
+<task type="auto">
   <name>Task 2: recommendations route + server registration (API-03)</name>
   <read_first>
     - .planning/phases/02-core-product-ui-mood-recommendations/02-RESEARCH.md (section "Domain: API-03 Endpoint" — route contract, Ajv schema, handler, response shape)

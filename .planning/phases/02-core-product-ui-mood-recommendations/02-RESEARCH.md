@@ -1319,19 +1319,13 @@ All dependencies confirmed from Phase 1 install:
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Should `/api/events` also exclude past events by default?**
-   - What we know: currently returns all 97 events including 22 past-dated items when called without `?date=` filter
-   - What's unclear: whether users browsing `/api/events` directly expect to see art shop items
-   - Recommendation: Add a `?upcoming=true` filter option to `/api/events` as a non-breaking addition; leave default behavior unchanged; document in Phase 2 plan
+1. **RESOLVED:** Add a `?upcoming=true` filter option to `/api/events` as a non-breaking addition; leave default behavior unchanged (implemented in plan 02-3 Task 1). Past-dated art-shop items are excluded from recommendations by the engine regardless.
 
-2. **Should the UI show a category filter as a `<select>` or additional chip row?**
-   - What we know: `<select>` is specified in the layout sketch above; chip row with horizontal scroll is an alternative
-   - Recommendation: `<select>` for category (fewer categories to show; saves screen space for date chips); chips for dates only
+2. **RESOLVED:** Category filter is a `<select>` (fewer categories; saves screen space); date stays a chip row (implemented in plan 02-4 Task 1).
 
-3. **Should the `serializeEvent()` function be extracted to a shared module immediately, or inline in recommendations.ts first?**
-   - Recommendation: Extract immediately to `src/http/serialize.ts` — prevents drift, easier to test, aligns with AGENTS.md "small clean modules" principle
+3. **RESOLVED:** Extract `serializeEvent()` immediately to `src/http/serialize.ts` — prevents drift, easier to test, aligns with AGENTS.md "small clean modules" (implemented in plan 02-3 Task 1).
 
 ---
 

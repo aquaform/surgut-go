@@ -28,10 +28,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Caching & Resilience (CACHE)
 
-- [ ] **CACHE-01**: Результаты парсинга кэшируются в JSON-файл на диске с TTL и переживают рестарт
+- [x] **CACHE-01**: Результаты парсинга кэшируются в JSON-файл на диске с TTL и переживают рестарт
 - [x] **CACHE-02**: Фоновое обновление по расписанию (cron) вне пути запроса; запросы читают из in-memory индекса
 - [x] **CACHE-03**: При падении источника отдаются последние валидные кэшированные данные (serve-stale-on-failure)
-- [ ] **CACHE-04**: Честный fallback seed из реально найденных примеров, всегда помеченный как cached/demo, доступен при пустом/недоступном live
+- [x] **CACHE-04**: Честный fallback seed из реально найденных примеров, всегда помеченный как cached/demo, доступен при пустом/недоступном live
 
 ### API (API)
 
@@ -114,10 +114,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRC-06 | Phase 3 | Complete |
 | SRC-07 | Phase 1 | Complete |
 | SRC-08 | Phase 1 | Complete |
-| CACHE-01 | Phase 1 | Pending |
+| CACHE-01 | Phase 1 | Complete |
 | CACHE-02 | Phase 1 | Complete |
 | CACHE-03 | Phase 1 | Complete |
-| CACHE-04 | Phase 1 | Pending |
+| CACHE-04 | Phase 1 | Complete |
 | API-01 | Phase 1 | Complete |
 | API-02 | Phase 1 | Complete |
 | API-03 | Phase 2 | Complete |

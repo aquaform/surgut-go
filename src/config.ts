@@ -10,6 +10,12 @@ export interface AppConfig {
   cacheDir: string;
   /** Cache TTL in milliseconds (default: 14400000 = 4 hours) */
   cacheTtlMs: number;
+  /**
+   * Enable the Yandex Afisha source adapter (disabled by default — ToS §3.1 risk).
+   * Set ENABLE_YANDEX_AFISHA=true to opt in. The operator accepts the ToS risk.
+   * (SRC-06, T-03-15)
+   */
+  enableYandexAfisha: boolean;
 }
 
 /**
@@ -33,5 +39,7 @@ export function loadConfig(): AppConfig {
     port,
     cacheDir: process.env['CACHE_DIR'] ?? '/app/cache',
     cacheTtlMs,
+    // Default false — operator must explicitly opt in to accept Yandex ToS §3.1 risk (T-03-15)
+    enableYandexAfisha: process.env['ENABLE_YANDEX_AFISHA'] === 'true',
   };
 }

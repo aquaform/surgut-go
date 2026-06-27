@@ -17,7 +17,7 @@ import { CacheStore } from './cache/store';
 import { buildEventIndex } from './pipeline/index-events';
 import { createServer } from './http/server';
 import { seedAdapter } from './sources/seed/index';
-import { sourceRegistry } from './sources/registry';
+import { buildSources } from './sources/registry';
 import { startRefreshLoop } from './cache/refresh';
 
 async function main(): Promise<void> {
@@ -45,7 +45,14 @@ async function main(): Promise<void> {
   // Called AFTER listen() — never blocks boot. startRefreshLoop is fire-and-forget:
   // it fires an immediate refresh and schedules periodic refresh via node-cron.
   // A refresh failure logs a warning and never crashes the process (serve-stale).
-  startRefreshLoop({ store, index, registry: sourceRegistry, config });
+  //
+  // buildSources assembles:
+  //   - active: adapters that will be scraped (afisha-ru, kassa-ugra, afisha-surguta,
+  //             + yandex-afisha when ENABLE_YANDEX_AFISHA=true)
+  //   - disabled: kassir-sur (always) + yandex-afisha (when flag is off)
+  //     → passed to runPipeline so they surface in /api/sources/status as 'blocked'
+  const { active, disabled } = buildSources(config);
+  startRefreshLoop({ store, index, registry: active, disabledSources: disabled, config });
 }
 
 main().catch((err: unknown) => {

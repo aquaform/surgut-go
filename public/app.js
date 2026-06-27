@@ -83,6 +83,9 @@ let freeOnly = false;
 /** Active category value or '' for all. */
 let activeCategory = '';
 
+/** Active keyword search query (lowercased) — '' means no filter (UI-06). */
+let searchQuery = '';
+
 /**
  * Map from event.sourceName -> source status fetched from /api/sources/status.
  * Used by renderCard() to decide whether to show a "Кэш" badge.
@@ -119,6 +122,18 @@ function applyFilters() {
       var eventMs = new Date(e.startDate).getTime();
       return eventMs >= now && eventMs < now + 7 * 86400000;
     }
+
+    // UI-06: keyword search (case-insensitive Russian, no extra network)
+    if (searchQuery) {
+      var haystack = [
+        e.title,
+        e.venue,
+        item.reason,
+        e.tags.join(' '),
+      ].join(' ').toLowerCase();
+      if (haystack.indexOf(searchQuery) === -1) return false;
+    }
+
     return true;
   });
 }
@@ -214,6 +229,8 @@ async function loadMood(mood) {
   activeDateChip  = '';
   freeOnly        = false;
   activeCategory  = '';
+  searchQuery     = '';
+  document.getElementById('search-input').value = '';
 
   // Highlight active mood button
   document.querySelectorAll('.mood-btn').forEach(function (b) {
@@ -325,6 +342,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Category filter
   document.getElementById('category-filter').addEventListener('change', function (e) {
     activeCategory = e.target.value;
+    renderCards(applyFilters());
+  });
+
+  // Search input (UI-06): filter visible cards by keyword, no fetch
+  document.getElementById('search-input').addEventListener('input', function (ev) {
+    searchQuery = ev.target.value.trim().toLowerCase();
     renderCards(applyFilters());
   });
 

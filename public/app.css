@@ -65,6 +65,30 @@ body {
 /* Filter section */
 .filters { padding-bottom: 8px; }
 
+/* UI-06: keyword search row */
+.search-row {
+  padding: 8px 16px 0;
+}
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: var(--clr-surface);
+  color: var(--clr-text);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-input:focus {
+  border-color: var(--clr-accent);
+}
+.search-input::placeholder {
+  color: var(--clr-muted);
+}
+
 /* Filter chips: horizontal scroll row */
 .chips {
   display: flex;

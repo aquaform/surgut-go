@@ -22,6 +22,17 @@
 
   <!-- UI-04: date filter chips (shown after mood tap) -->
   <section class="filters hidden" id="filters">
+    <!-- UI-06: keyword text search -->
+    <div class="search-row">
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Поиск по названию, месту…"
+        aria-label="Поиск событий"
+        autocomplete="off"
+      >
+    </div>
     <div class="chips" role="group" aria-label="Фильтр по дате">
       <button class="chip chip--active" data-date="">Все</button>
       <button class="chip" data-date="today">Сегодня</button>

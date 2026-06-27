@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "03-5 human-verify checkpoint — UX-01 date fix + UI-06 search automated tasks done; awaiting visual verification"
-last_updated: "2026-06-27T10:47:49Z"
+stopped_at: "03-4 complete — afisha-ru registered, kassir-sur+yandex blocked, 403→blocked mapped, 216 tests green"
+last_updated: "2026-06-27T11:05:00Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 3
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 03 (yellow-sources-text-search) — EXECUTING
-Plan: 5 of 5
-Status: Awaiting human-verify checkpoint (Task 3 of 03-5)
+Plan: 4 of 5 (complete)
+Status: 03-4 complete; 03-5 has checkpoint pending visual verify
 Last activity: 2026-06-27
 
 Progress: [█████████░] 88%
@@ -66,6 +66,7 @@ Progress: [█████████░] 88%
 | Phase 03 P03-1 | 185 | 2 tasks | 4 files |
 | Phase 03-yellow-sources-text-search P2 | 45 | 2 tasks | 3 files |
 | Phase 03-yellow-sources-text-search P3 | 30 | 2 tasks | 5 files |
+| Phase 03-yellow-sources-text-search P4 | 25 | 3 tasks | 6 files |
 | Phase 03-yellow-sources-text-search P5 | 10 | 2 tasks (human-verify pending) | 3 files |
 
 ## Accumulated Context
@@ -101,6 +102,9 @@ Recent decisions affecting current work:
 - [03-3]: kassir-sur ships as honest disabled stub (enabled:false + reason + throw) — never scrapes, never invents events
 - [03-3]: yandex-afisha carousel dedup by slug; Format 4 "DD месяца, HH:MM" → parseDateFull → hasTime:true
 - [03-3]: 403→tagged rethrow pattern: if err.message.includes('403') → throw new Error('HTTP 403 — source blocked')
+- [03-4]: DisabledSource list pattern (Option B from RESEARCH) keeps registry clean; disabled sources appear as blocked in status without being scraped
+- [03-4]: 403/blocked message detection in run.ts rejection handler maps to status 'blocked' not 'error' (T-03-12)
+- [03-4]: buildSources(config) assembly function in registry.ts — single call site in server.ts handles Yandex toggle
 
 ### Pending Todos
 

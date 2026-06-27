@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Deployable Pipeline & Green Sources** - Boot-first deploy with seed data, both GREEN scrapers, JSON cache, and core API — live on surgut-go.apps.sielom.ru (completed 2026-06-27)
 - [x] **Phase 2: Core Product UI & Mood Recommendations** - Mobile-first main page with 4 mood buttons, ranked event cards, dedup, date/price filters, and visible source status — core value delivered end-to-end (completed 2026-06-27)
-- [ ] **Phase 3: Yellow Sources & Text Search** - Three cautiously-added YELLOW source adapters (afisha.ru, kassir.ru, Yandex Afisha disabled-by-default) and keyword search
+- [x] **Phase 3: Yellow Sources & Text Search** - Three cautiously-added YELLOW source adapters (afisha.ru, kassir.ru, Yandex Afisha disabled-by-default) and keyword search (completed 2026-06-27)
 
 ## Phase Details
 
@@ -74,8 +74,8 @@ Plans:
 - [x] 03-1-PLAN.md — Date + model foundation: parseDateFull + Format 3/4 + optional hasTime on model/serializer (UX-01 backend; enables SRC-04/06) [Wave 1]
 - [x] 03-2-PLAN.md — afisha.ru/surgut YELLOW adapter, href-pattern selectors + min-results guard, fixture-tested (SRC-04) [Wave 2]
 - [x] 03-3-PLAN.md — kassir-sur honest disabled stub (SRC-05) + yandex-afisha disabled-by-default adapter (SRC-06), fixture-tested [Wave 2]
-- [ ] 03-5-PLAN.md — UI: humanizeDate date-only fix (UX-01) + client-side keyword search (UI-06) [Wave 2]
-- [ ] 03-4-PLAN.md — Integration: register afisha-ru, disabledSources→blocked, 403→blocked mapping, ENABLE_YANDEX_AFISHA toggle, quality gate (SRC-04/05/06) [Wave 3]
+- [x] 03-5-PLAN.md — UI: humanizeDate date-only fix (UX-01) + client-side keyword search (UI-06) [Wave 2]
+- [x] 03-4-PLAN.md — Integration: register afisha-ru, disabledSources→blocked, 403→blocked mapping, ENABLE_YANDEX_AFISHA toggle, quality gate (SRC-04/05/06) [Wave 3]
 **UI hint**: yes
 
 ## Progress
@@ -87,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
 | 2. Core Product UI & Mood Recommendations | 4/4 | Complete   | 2026-06-27 |
-| 3. Yellow Sources & Text Search | 2/5 | In Progress|  |
+| 3. Yellow Sources & Text Search | 5/5 | Complete   | 2026-06-27 |

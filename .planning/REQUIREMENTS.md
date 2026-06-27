@@ -21,7 +21,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SRC-02**: Парсер `kassa-ugra.ru/afisha` (🟢 GREEN) даёт нормализованные события
 - [x] **SRC-03**: Парсер `afisha.surguta.ru` (🟢 GREEN, Crawl-delay 10) даёт нормализованные события с уважением к robots.txt
 - [x] **SRC-04**: Парсер `afisha.ru/surgut` (🟡 YELLOW) с guard на хрупкость селекторов
-- [ ] **SRC-05**: Парсер `sur.kassir.ru` (🟡 YELLOW, AJAX) — концерты/театр
+- [x] **SRC-05**: Парсер `sur.kassir.ru` (🟡 YELLOW, AJAX) — концерты/театр
 - [x] **SRC-06**: Парсер `afisha.yandex.ru/surgut` (🟡 YELLOW, риск ToS) под конфиг-тогглом, по умолчанию выключен
 - [x] **SRC-07**: Парсинг уважает robots.txt и crawl-delay; вежливые таймауты/ретраи/User-Agent
 - [x] **SRC-08**: Статус каждого источника (live / cached / blocked / error) отслеживается и отдаётся
@@ -110,7 +110,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRC-02 | Phase 1 | Complete |
 | SRC-03 | Phase 1 | Complete |
 | SRC-04 | Phase 3 | Complete |
-| SRC-05 | Phase 3 | Pending |
+| SRC-05 | Phase 3 | Complete |
 | SRC-06 | Phase 3 | Complete |
 | SRC-07 | Phase 1 | Complete |
 | SRC-08 | Phase 1 | Complete |

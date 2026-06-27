@@ -15,9 +15,19 @@ function surgutDate(utcDate) {
 
 /**
  * Human-readable date string in Russian. Returns "Сегодня", "Завтра", or
- * "пн, 4 июл, 20:00". Omits time when hour and minute are both zero.
+ * "пн, 4 июл, 20:00". Omits time for date-only events.
+ *
+ * hasTime: explicit flag from SerializedEvent (may be undefined for cached data).
+ * When hasTime is undefined, falls back to UTC-midnight inference:
+ *   UTC 00:00:00 → date-only (no "05:00" artefact). (UX-01 Tier 1)
  */
-function humanizeDate(isoString) {
+function humanizeDate(isoString, hasTime) {
+  var rawUtcDate = new Date(isoString);
+  var isDateOnly = hasTime === false
+    || (hasTime === undefined
+        && rawUtcDate.getUTCHours() === 0
+        && rawUtcDate.getUTCMinutes() === 0);
+
   const d   = surgutDate(isoString);
   const now = surgutDate(new Date());
 
@@ -30,7 +40,7 @@ function humanizeDate(isoString) {
 
   const h = d.getUTCHours();
   const m = d.getUTCMinutes();
-  const timeStr = (h === 0 && m === 0)
+  const timeStr = isDateOnly
     ? ''
     : `, ${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
 
@@ -167,7 +177,7 @@ function renderCard(item) {
     badge +
     '<h3 class="card__title">' + escHtml(e.title) + '</h3>' +
     '<time class="card__date" datetime="' + escHtml(e.startDate) + '">' +
-      humanizeDate(e.startDate) +
+      humanizeDate(e.startDate, e.hasTime) +
     '</time>' +
     '<p class="card__venue">' + escHtml(e.venue) + '</p>' +
     priceHtml +

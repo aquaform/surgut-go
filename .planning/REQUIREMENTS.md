@@ -54,7 +54,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **UI-03**: Карточка события: название, дата/время, площадка, цена, категория/теги, «почему рекомендовано», источник, кнопка «Открыть/купить билет»
 - [x] **UI-04**: Фильтры-чипы по дате: сегодня / завтра / выходные / ближайшие 7 дней
 - [x] **UI-05**: Фильтр цена/бесплатно и фильтр по категории
-- [ ] **UI-06**: Текстовый поиск по событиям
+- [x] **UI-06**: Текстовый поиск по событиям
 - [x] **UI-07**: Видимый пользователю статус источников и пометка demo/cached данных
 
 ### Deploy (DEPLOY)
@@ -131,7 +131,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-03 | Phase 2 | Complete |
 | UI-04 | Phase 2 | Complete |
 | UI-05 | Phase 2 | Complete |
-| UI-06 | Phase 3 | Pending |
+| UI-06 | Phase 3 | Complete |
 | UI-07 | Phase 2 | Complete |
 | DEPLOY-01 | Phase 1 | Complete |
 | DEPLOY-02 | Phase 1 | Complete |

@@ -26,17 +26,14 @@ function makeEvent(
 ): NormalizedEvent {
   return {
     id:         `id-${overrides.title}`,
-    title:      overrides.title,
-    startDate:  overrides.startDate,
-    venue:      overrides.venue ?? 'Test Venue',
+    venue:      'Test Venue',
     priceText:  'Бесплатно',
     isFree:     true,
-    sourceName: overrides.sourceName ?? 'seed',
+    sourceName: 'seed',
     sourceUrl:  `https://example.com/${encodeURIComponent(overrides.title)}`,
-    category:   overrides.category,
-    tags:       overrides.tags ?? [],
+    tags:       [],
     fetchedAt:  FIXED_FETCHED_AT,
-    isSeed:     overrides.isSeed ?? true,
+    isSeed:     true,
     ...overrides,
   };
 }

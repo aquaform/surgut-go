@@ -26,17 +26,14 @@ const FIXED_FETCHED_AT = new Date('2026-06-27T00:00:00.000Z');
 function makeEvent(overrides: Partial<NormalizedEvent> & Pick<NormalizedEvent, 'title' | 'startDate' | 'venue'>): NormalizedEvent {
   return {
     id:          `id-${overrides.title}-${overrides.startDate.toISOString()}`,
-    title:       overrides.title,
-    startDate:   overrides.startDate,
-    venue:       overrides.venue,
     priceText:   'Бесплатно',
     isFree:      true,
-    sourceName:  overrides.sourceName ?? 'source-a',
-    sourceUrl:   overrides.sourceUrl ?? `https://example.com/${encodeURIComponent(overrides.title)}`,
-    category:    overrides.category ?? 'concert',
-    tags:        overrides.tags ?? [],
+    sourceName:  'source-a',
+    sourceUrl:   `https://example.com/${encodeURIComponent(overrides.title)}`,
+    category:    'concert' as const,
+    tags:        [],
     fetchedAt:   FIXED_FETCHED_AT,
-    isSeed:      overrides.isSeed ?? false,
+    isSeed:      false,
     ...overrides,
   };
 }

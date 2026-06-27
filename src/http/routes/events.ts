@@ -11,6 +11,7 @@
 
 import type { FastifyPluginAsync } from 'fastify';
 import type { NormalizedEvent, EventCategory } from '../../types/events';
+import { serializeEvent } from '../serialize';
 
 // ---------------------------------------------------------------------------
 // Date helpers (UTC+5)
@@ -80,39 +81,6 @@ function filterByDate(
 }
 
 // ---------------------------------------------------------------------------
-// Response serialization
-// ---------------------------------------------------------------------------
-
-/**
- * Convert a NormalizedEvent to a plain object with ISO strings for all Date
- * fields, ready for JSON serialization.
- *
- * `isSeed` is preserved as-is — never mislabelled (AGG-02).
- */
-function serializeEvent(e: NormalizedEvent): Record<string, unknown> {
-  return {
-    id:         e.id,
-    title:      e.title,
-    startDate:  e.startDate.toISOString(),
-    endDate:    e.endDate?.toISOString(),
-    venue:      e.venue,
-    address:    e.address,
-    priceText:  e.priceText,
-    priceMin:   e.priceMin,
-    priceMax:   e.priceMax,
-    isFree:     e.isFree,
-    sourceName: e.sourceName,
-    sourceUrl:  e.sourceUrl,
-    category:   e.category,
-    tags:       e.tags,
-    ageLimit:   e.ageLimit,
-    imageUrl:   e.imageUrl,
-    fetchedAt:  e.fetchedAt.toISOString(),
-    isSeed:     e.isSeed,
-  };
-}
-
-// ---------------------------------------------------------------------------
 // Route
 // ---------------------------------------------------------------------------
 
@@ -120,6 +88,7 @@ interface EventsQuerystring {
   date?:     'today' | 'tomorrow' | 'weekend' | 'week';
   category?: EventCategory;
   free?:     boolean;
+  upcoming?: boolean;
 }
 
 const eventsRoute: FastifyPluginAsync = async (fastify) => {
@@ -141,7 +110,8 @@ const eventsRoute: FastifyPluginAsync = async (fastify) => {
                 'lecture', 'sport', 'standup', 'other',
               ],
             },
-            free: { type: 'boolean' },
+            free:     { type: 'boolean' },
+            upcoming: { type: 'boolean' },
           },
           additionalProperties: false,
         },
@@ -190,7 +160,7 @@ const eventsRoute: FastifyPluginAsync = async (fastify) => {
       },
     },
     async (req, reply) => {
-      const { date, category, free } = req.query;
+      const { date, category, free, upcoming } = req.query;
 
       // Read from the in-memory index (no I/O, no pipeline coupling — T-01-15)
       let events = fastify.index.all();
@@ -203,6 +173,21 @@ const eventsRoute: FastifyPluginAsync = async (fastify) => {
       }
       if (free === true) {
         events = events.filter(e => e.isFree);
+      }
+      if (upcoming === true) {
+        // Effective-date rule mirrors the recommendation engine:
+        // still-running exhibitions (startDate < now, endDate > now) count as "today"
+        // so they are retained; past events with no ongoing endDate are excluded.
+        const now = Date.now();
+        events = events.filter(e => {
+          const effectiveMs =
+            e.startDate.getTime() < now &&
+            e.endDate !== undefined &&
+            e.endDate.getTime() > now
+              ? now                       // still-running exhibition → pin to now
+              : e.startDate.getTime();
+          return effectiveMs >= now;
+        });
       }
 
       const serialized = events.map(serializeEvent);

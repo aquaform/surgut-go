@@ -64,6 +64,31 @@ const THEATER_EVENT: NormalizedEvent = {
   category:   'theater',
 };
 
+/** Past event with no endDate — must be hidden by ?upcoming=true */
+const PAST_EVENT: NormalizedEvent = {
+  ...BASE,
+  id:        'past1',
+  title:     'Past Lecture',
+  startDate: new Date('2020-01-01T10:00:00.000Z'), // definitively in the past
+  isFree:    true,
+  priceText: 'Бесплатно',
+  sourceUrl: 'https://example.com/past1',
+  category:  'lecture',
+};
+
+/** Still-running exhibition: startDate in far past, endDate far in future */
+const RUNNING_EXHIBITION: NormalizedEvent = {
+  ...BASE,
+  id:        'run1',
+  title:     'Running Exhibition',
+  startDate: new Date('2020-06-01T10:00:00.000Z'), // past start
+  endDate:   new Date('2030-12-31T10:00:00.000Z'), // far-future end
+  isFree:    false,
+  priceText: 'Цена не указана',
+  sourceUrl: 'https://example.com/run1',
+  category:  'exhibition',
+};
+
 // ---------------------------------------------------------------------------
 // Test helpers
 // ---------------------------------------------------------------------------
@@ -200,5 +225,45 @@ describe('GET /api/events', () => {
     const body = JSON.parse(res.body) as { events: { id: string }[] };
     expect(body.events).toHaveLength(1);
     expect(body.events[0]!.id).toBe('c2');
+  });
+
+  // ── ?upcoming=true tests ────────────────────────────────────────────────────
+
+  it('upcoming=true excludes past-dated events without an active endDate', async () => {
+    app = buildApp([CONCERT_EVENT, PAST_EVENT]);
+    const res = await app.inject({ method: 'GET', url: '/api/events?upcoming=true' });
+    expect(res.statusCode).toBe(200);
+    const body = JSON.parse(res.body) as { events: { id: string }[]; meta: { count: number } };
+    const ids = body.events.map(e => e.id);
+    expect(ids).not.toContain('past1');
+    expect(ids).toContain('c1'); // future concert still included
+    expect(body.meta.count).toBe(body.events.length);
+  });
+
+  it('upcoming=true retains a still-running exhibition (startDate past, endDate future)', async () => {
+    app = buildApp([PAST_EVENT, RUNNING_EXHIBITION]);
+    const res = await app.inject({ method: 'GET', url: '/api/events?upcoming=true' });
+    expect(res.statusCode).toBe(200);
+    const body = JSON.parse(res.body) as { events: { id: string }[] };
+    const ids = body.events.map(e => e.id);
+    expect(ids).toContain('run1');   // still-running kept
+    expect(ids).not.toContain('past1'); // pure-past excluded
+  });
+
+  it('omitting upcoming returns all events unchanged (no behavior change)', async () => {
+    app = buildApp([CONCERT_EVENT, PAST_EVENT, RUNNING_EXHIBITION]);
+    const res = await app.inject({ method: 'GET', url: '/api/events' });
+    expect(res.statusCode).toBe(200);
+    const body = JSON.parse(res.body) as { events: { id: string }[] };
+    // All 3 events returned — no upcoming filter applied
+    expect(body.events).toHaveLength(3);
+  });
+
+  it('strips unknown query parameters without error (Fastify v5 removeAdditional default)', async () => {
+    // Fastify v5 default Ajv config: additionalProperties: false removes extra props
+    // rather than rejecting them — extra params never reach the handler (security goal met).
+    app = buildApp([]);
+    const res = await app.inject({ method: 'GET', url: '/api/events?bogus=true' });
+    expect(res.statusCode).toBe(200);
   });
 });

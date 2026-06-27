@@ -13,7 +13,7 @@ Three phases deliver the product from nothing to a fully deployed city-events ag
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Deployable Pipeline & Green Sources** - Boot-first deploy with seed data, both GREEN scrapers, JSON cache, and core API — live on surgut-go.apps.sielom.ru (completed 2026-06-27)
-- [ ] **Phase 2: Core Product UI & Mood Recommendations** - Mobile-first main page with 4 mood buttons, ranked event cards, dedup, date/price filters, and visible source status — core value delivered end-to-end
+- [x] **Phase 2: Core Product UI & Mood Recommendations** - Mobile-first main page with 4 mood buttons, ranked event cards, dedup, date/price filters, and visible source status — core value delivered end-to-end (completed 2026-06-27)
 - [ ] **Phase 3: Yellow Sources & Text Search** - Three cautiously-added YELLOW source adapters (afisha.ru, kassir.ru, Yandex Afisha disabled-by-default) and keyword search
 
 ## Phase Details
@@ -56,7 +56,7 @@ Plans:
 - [x] 02-1-PLAN.md — Pure recommendation engine: mood mapping + tonight-first ranking + reason text (MOOD-01/02/03)
 - [x] 02-2-PLAN.md — Dedup + EventIndex tests proving AGG-03 cross-source collapse and feeding QA-02 coverage
 - [x] 02-3-PLAN.md — GET /api/recommendations route + shared serializer + ?upcoming filter (API-03)
-- [ ] 02-4-PLAN.md — Mobile UI shell + vanilla client (mood/cards/filters/source panel/Демо badges) + QA-02 coverage gate (UI-01..05,07)
+- [x] 02-4-PLAN.md — Mobile UI shell + vanilla client (mood/cards/filters/source panel/Демо badges) + QA-02 coverage gate (UI-01..05,07)
 **UI hint**: yes
 
 ### Phase 3: Yellow Sources & Text Search
@@ -80,5 +80,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
-| 2. Core Product UI & Mood Recommendations | 3/4 | In Progress|  |
+| 2. Core Product UI & Mood Recommendations | 4/4 | Complete   | 2026-06-27 |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

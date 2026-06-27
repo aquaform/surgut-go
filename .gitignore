@@ -9,3 +9,4 @@ server.js
 /cache/
 coverage/
 .cache-test*/
+.playwright-mcp/

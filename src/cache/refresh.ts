@@ -20,6 +20,7 @@
 import type { CacheStore } from './store';
 import type { EventIndex } from '../pipeline/index-events';
 import type { SourceAdapter } from '../sources/base';
+import type { DisabledSource } from '../sources/registry';
 import type { AppConfig } from '../config';
 import { runPipeline } from '../pipeline/run';
 import { dedup } from '../pipeline/dedup';
@@ -35,6 +36,12 @@ export interface RefreshOptions {
   store: CacheStore;
   index: EventIndex;
   registry: SourceAdapter[];
+  /**
+   * Non-scraped sources that must appear in /api/sources/status as 'blocked'.
+   * Passed through to runPipeline so the status endpoint shows them honestly
+   * without ever calling scrape() on them (T-03-13, SRC-05, SRC-06).
+   */
+  disabledSources?: DisabledSource[];
   config: AppConfig;
 }
 
@@ -53,7 +60,7 @@ export interface RefreshOptions {
  * Never throws. Logs a warning on any error so the process stays alive (CACHE-03).
  */
 async function runRefresh(opts: RefreshOptions): Promise<void> {
-  const { store, index, registry } = opts;
+  const { store, index, registry, disabledSources } = opts;
 
   // Snapshot prev so serve-stale can fall back to current data on failure
   const prev = {
@@ -62,7 +69,7 @@ async function runRefresh(opts: RefreshOptions): Promise<void> {
   };
 
   try {
-    const results = await runPipeline(registry, prev);
+    const results = await runPipeline(registry, prev, disabledSources);
     const deduped = dedup(results.events);
 
     // Persist to disk atomically, then update in-memory index

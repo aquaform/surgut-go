@@ -71,7 +71,7 @@ Plans:
   4. Text search in the UI filters visible event cards by keyword (case-insensitive, Russian locale) without a page reload
 **Plans**: 5 plans (3 waves)
 Plans:
-- [ ] 03-1-PLAN.md — Date + model foundation: parseDateFull + Format 3/4 + optional hasTime on model/serializer (UX-01 backend; enables SRC-04/06) [Wave 1]
+- [x] 03-1-PLAN.md — Date + model foundation: parseDateFull + Format 3/4 + optional hasTime on model/serializer (UX-01 backend; enables SRC-04/06) [Wave 1]
 - [ ] 03-2-PLAN.md — afisha.ru/surgut YELLOW adapter, href-pattern selectors + min-results guard, fixture-tested (SRC-04) [Wave 2]
 - [ ] 03-3-PLAN.md — kassir-sur honest disabled stub (SRC-05) + yandex-afisha disabled-by-default adapter (SRC-06), fixture-tested [Wave 2]
 - [ ] 03-5-PLAN.md — UI: humanizeDate date-only fix (UX-01) + client-side keyword search (UI-06) [Wave 2]
@@ -87,4 +87,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
 | 2. Core Product UI & Mood Recommendations | 4/4 | Complete   | 2026-06-27 |
-| 3. Yellow Sources & Text Search | 0/5 | Planned | - |
+| 3. Yellow Sources & Text Search | 1/5 | In Progress|  |

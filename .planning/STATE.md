@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: "01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy"
-last_updated: "2026-06-27T05:15:49.243Z"
+last_updated: "2026-06-27T09:00:40.571Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 3
   completed_phases: 2
-  total_plans: 12
-  completed_plans: 12
+  total_plans: 17
+  completed_plans: 13
   percent: 67
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-26)
 
 **Core value:** Пользователь нажимает кнопку-настроение и сразу получает релевантные, актуальные карточки событий Сургута с честным указанием источника и свежести данных.
-**Current focus:** Phase 02 — core-product-ui-mood-recommendations
+**Current focus:** Phase 03 — yellow-sources-text-search
 
 ## Current Position
 
-Phase: 02 (core-product-ui-mood-recommendations) — EXECUTING
-Plan: 4 of 4
+Phase: 03 (yellow-sources-text-search) — EXECUTING
+Plan: 2 of 5
 Status: Ready to execute
 Last activity: 2026-06-27
 
-Progress: [█████████░] 92%
+Progress: [████████░░] 76%
 
 ## Performance Metrics
 
@@ -63,6 +63,7 @@ Progress: [█████████░] 92%
 | Phase 02-core-product-ui-mood-recommendations P1 | 10m | 2 tasks | 4 files |
 | Phase 02-core-product-ui-mood-recommendations P2 | 5m | 2 tasks | 2 files |
 | Phase 02 P3 | 11 | 3 tasks | 8 files |
+| Phase 03 P03-1 | 185 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ Recent decisions affecting current work:
 - [01-8]: Quality gate (lint/typecheck/79 tests/build/docker) passed clean on existing code — QA-01 satisfied
 - [Phase ?]: serializeEvent extracted to serialize.ts — single source of truth used by both event routes
 - [Phase ?]: GET /api/recommendations: Ajv enum validation + additionalProperties:false; reads index.all() only
+- [Phase ?]: parseDateFull is canonical; parseRussianDate() delegates for backward compat
+- [Phase ?]: Format 3/4 checked before Format 2 in parseDateFull to prevent regex swallowing explicit times (Pitfall 3)
+- [Phase ?]: hasTime optional on NormalizedEvent; undefined = unknown; backward compat for existing adapters + cached data
 
 ### Pending Todos
 
@@ -113,6 +117,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-27T05:15:49.237Z
+Last session: 2026-06-27T09:00:40.565Z
 Stopped at: 01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy
 Resume file: None

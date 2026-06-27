@@ -51,7 +51,12 @@ Plans:
   3. Date filter chips (Сегодня / Завтра / Выходные / 7 дней) correctly filter events in Asia/Yekaterinburg timezone; the free-events toggle hides paid events and only events with `isFree: true` remain
   4. Each event card and the source status panel visibly distinguish live / cached / demo data — no seed event is ever presented without a "Демо" or "Кэш" badge
   5. vitest coverage for parsers, dedup, mood mapping, and date/price utilities reaches 80%+ (measured by coverage report)
-**Plans**: TBD
+**Plans**: 4 plans (3 waves)
+Plans:
+- [ ] 02-1-PLAN.md — Pure recommendation engine: mood mapping + tonight-first ranking + reason text (MOOD-01/02/03)
+- [ ] 02-2-PLAN.md — Dedup + EventIndex tests proving AGG-03 cross-source collapse and feeding QA-02 coverage
+- [ ] 02-3-PLAN.md — GET /api/recommendations route + shared serializer + ?upcoming filter (API-03)
+- [ ] 02-4-PLAN.md — Mobile UI shell + vanilla client (mood/cards/filters/source panel/Демо badges) + QA-02 coverage gate (UI-01..05,07)
 **UI hint**: yes
 
 ### Phase 3: Yellow Sources & Text Search
@@ -75,5 +80,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
-| 2. Core Product UI & Mood Recommendations | 0/TBD | Not started | - |
+| 2. Core Product UI & Mood Recommendations | 0/4 | Planned | - |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

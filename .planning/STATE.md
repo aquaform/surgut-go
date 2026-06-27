@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: "03-4 complete — afisha-ru registered, kassir-sur+yandex blocked, 403→blocked mapped, 216 tests green"
-last_updated: "2026-06-27T11:05:00Z"
-last_activity: 2026-06-27
+status: Awaiting next milestone
+stopped_at: "03-5 Task 3 (checkpoint:human-verify) — UX-01 humanizeDate fix (532fd0c) + UI-06 keyword search (75d230a) committed; awaiting /deploy + visual verification"
+last_updated: "2026-06-27T11:46:37.365Z"
+last_activity: 2026-06-27 — Milestone v1.0 completed and archived
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 17
-  completed_plans: 15
-  percent: 88
+  completed_plans: 17
+  percent: 100
 ---
 
 # Project State
@@ -25,12 +25,10 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 
 ## Current Position
 
-Phase: 03 (yellow-sources-text-search) — EXECUTING
-Plan: 4 of 5 (complete)
-Status: 03-4 complete; 03-5 has checkpoint pending visual verify
-Last activity: 2026-06-27
-
-Progress: [█████████░] 88%
+Phase: Milestone v1.0 complete
+Plan: —
+Status: Awaiting next milestone
+Last activity: 2026-06-27 — Milestone v1.0 completed and archived
 
 ## Performance Metrics
 
@@ -130,3 +128,7 @@ None yet.
 Last session: 2026-06-27T10:47:49Z
 Stopped at: 03-5 Task 3 (checkpoint:human-verify) — UX-01 humanizeDate fix (532fd0c) + UI-06 keyword search (75d230a) committed; awaiting /deploy + visual verification
 Resume file: None
+
+## Operator Next Steps
+
+- Start the next milestone with /gsd-new-milestone

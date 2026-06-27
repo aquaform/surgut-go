@@ -43,9 +43,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Recommendations (MOOD)
 
-- [ ] **MOOD-01**: Статическая таблица маппинга настроение → категории/теги/площадки (drink/dance/learn/music)
-- [ ] **MOOD-02**: Ранжирование приоритизирует ближайшие вечерние события для drink/dance
-- [ ] **MOOD-03**: Каждая рекомендация содержит понятное «почему рекомендовано»
+- [x] **MOOD-01**: Статическая таблица маппинга настроение → категории/теги/площадки (drink/dance/learn/music)
+- [x] **MOOD-02**: Ранжирование приоритизирует ближайшие вечерние события для drink/dance
+- [x] **MOOD-03**: Каждая рекомендация содержит понятное «почему рекомендовано»
 
 ### UI (UI)
 
@@ -123,9 +123,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | API-03 | Phase 2 | Pending |
 | API-04 | Phase 1 | Complete |
 | API-05 | Phase 1 | Complete |
-| MOOD-01 | Phase 2 | Pending |
-| MOOD-02 | Phase 2 | Pending |
-| MOOD-03 | Phase 2 | Pending |
+| MOOD-01 | Phase 2 | Complete |
+| MOOD-02 | Phase 2 | Complete |
+| MOOD-03 | Phase 2 | Complete |
 | UI-01 | Phase 2 | Pending |
 | UI-02 | Phase 2 | Pending |
 | UI-03 | Phase 2 | Pending |

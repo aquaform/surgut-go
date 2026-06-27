@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: "01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy"
-last_updated: "2026-06-27T04:54:34.132Z"
+last_updated: "2026-06-27T05:09:06.137Z"
 last_activity: 2026-06-27
 progress:
   total_phases: 3
   completed_phases: 1
   total_plans: 12
-  completed_plans: 10
+  completed_plans: 11
   percent: 33
 ---
 
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-06-26)
 ## Current Position
 
 Phase: 02 (core-product-ui-mood-recommendations) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 Status: Ready to execute
 Last activity: 2026-06-27
 
-Progress: [████████░░] 83%
+Progress: [█████████░] 92%
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Progress: [████████░░] 83%
 | Phase 01-deployable-pipeline-green-sources P01-8 | 10min | 2 tasks (deploy pending) | 1 file |
 | Phase 02-core-product-ui-mood-recommendations P1 | 10m | 2 tasks | 4 files |
 | Phase 02-core-product-ui-mood-recommendations P2 | 5m | 2 tasks | 2 files |
+| Phase 02 P3 | 11 | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,8 @@ Recent decisions affecting current work:
 - [Phase ?]: sources/status route exposes human-readable error only — no stack traces or internal URLs (T-01-14 mitigated)
 - [01-8]: Public GitHub repo aquaform/surgut-go created; origin set; main pushed — DEPLOY-03 satisfied
 - [01-8]: Quality gate (lint/typecheck/79 tests/build/docker) passed clean on existing code — QA-01 satisfied
+- [Phase ?]: serializeEvent extracted to serialize.ts — single source of truth used by both event routes
+- [Phase ?]: GET /api/recommendations: Ajv enum validation + additionalProperties:false; reads index.all() only
 
 ### Pending Todos
 
@@ -110,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-06-27T04:54:34.125Z
+Last session: 2026-06-27T05:09:03.414Z
 Stopped at: 01-8 deploy checkpoint — quality gate passed, GitHub repo published at https://github.com/aquaform/surgut-go, awaiting operator /deploy
 Resume file: None

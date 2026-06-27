@@ -55,7 +55,7 @@ Plans:
 Plans:
 - [x] 02-1-PLAN.md — Pure recommendation engine: mood mapping + tonight-first ranking + reason text (MOOD-01/02/03)
 - [x] 02-2-PLAN.md — Dedup + EventIndex tests proving AGG-03 cross-source collapse and feeding QA-02 coverage
-- [ ] 02-3-PLAN.md — GET /api/recommendations route + shared serializer + ?upcoming filter (API-03)
+- [x] 02-3-PLAN.md — GET /api/recommendations route + shared serializer + ?upcoming filter (API-03)
 - [ ] 02-4-PLAN.md — Mobile UI shell + vanilla client (mood/cards/filters/source panel/Демо badges) + QA-02 coverage gate (UI-01..05,07)
 **UI hint**: yes
 
@@ -80,5 +80,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
-| 2. Core Product UI & Mood Recommendations | 2/4 | In Progress|  |
+| 2. Core Product UI & Mood Recommendations | 3/4 | In Progress|  |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |

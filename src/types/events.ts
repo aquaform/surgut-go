@@ -52,6 +52,15 @@ export interface NormalizedEvent {
    * Never expose seed events as live.
    */
   isSeed: boolean;
+  /**
+   * True when the source string contained an explicit HH:MM start time.
+   * False when the source gave a date only — startDate is stored at UTC midnight.
+   * Absent (undefined) means unknown; the UI falls back to UTC-midnight inference.
+   *
+   * Existing adapters omit this field for backward compatibility.
+   * New Phase-3+ adapters set it explicitly via parseDateFull().
+   */
+  hasTime?: boolean;
 }
 
 /** Per-source status as returned by GET /api/sources/status */

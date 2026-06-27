@@ -12,7 +12,7 @@ import type { NormalizedEvent } from '../types/events';
 /**
  * Plain-object representation of a NormalizedEvent ready for JSON serialization.
  * All Date fields are serialized as ISO 8601 UTC strings.
- * 17 fields — identical shape to the previous inline serializeEvent() in events.ts.
+ * 18 fields (17 original + hasTime added in Phase 3).
  */
 export interface SerializedEvent {
   id:         string;
@@ -33,6 +33,8 @@ export interface SerializedEvent {
   imageUrl:   string | undefined;
   fetchedAt:  string;
   isSeed:     boolean;
+  /** Passed through from NormalizedEvent.hasTime — undefined for legacy cached data */
+  hasTime:    boolean | undefined;
 }
 
 /**
@@ -61,5 +63,6 @@ export function serializeEvent(e: NormalizedEvent): SerializedEvent {
     imageUrl:   e.imageUrl,
     fetchedAt:  e.fetchedAt.toISOString(),
     isSeed:     e.isSeed,
+    hasTime:    e.hasTime,
   };
 }

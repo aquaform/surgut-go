@@ -61,8 +61,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **DEPLOY-01**: Рабочий Dockerfile: `node:20-slim`, слушает `0.0.0.0`, порт из `PORT` (дефолт 3000), healthcheck без wget/curl
 - [x] **DEPLOY-02**: Сервер стартует мгновенно на seed-данных (healthcheck проходит в start-period), парсинг — в фоне
-- [ ] **DEPLOY-03**: GitHub-репозиторий создан, origin добавлен, main запушен
-- [ ] **DEPLOY-04**: Публичный деплой на `https://surgut-go.apps.sielom.ru` через `/deploy` (Dokploy); проверены `/health`, главная и хотя бы один API endpoint
+- [x] **DEPLOY-03**: GitHub-репозиторий создан, origin добавлен, main запушен
+- [x] **DEPLOY-04**: Публичный деплой на `https://surgut-go.apps.sielom.ru` через `/deploy` (Dokploy); проверены `/health`, главная и хотя бы один API endpoint
 
 ### Quality (QA)
 
@@ -135,8 +135,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-07 | Phase 2 | Pending |
 | DEPLOY-01 | Phase 1 | Complete |
 | DEPLOY-02 | Phase 1 | Complete |
-| DEPLOY-03 | Phase 1 | Pending |
-| DEPLOY-04 | Phase 1 | Pending |
+| DEPLOY-03 | Phase 1 | Complete |
+| DEPLOY-04 | Phase 1 | Complete |
 | QA-01 | Phase 1 | Complete |
 | QA-02 | Phase 2 | Pending |
 

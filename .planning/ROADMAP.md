@@ -12,7 +12,7 @@ Three phases deliver the product from nothing to a fully deployed city-events ag
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Deployable Pipeline & Green Sources** - Boot-first deploy with seed data, both GREEN scrapers, JSON cache, and core API — live on surgut-go.apps.sielom.ru
+- [x] **Phase 1: Deployable Pipeline & Green Sources** - Boot-first deploy with seed data, both GREEN scrapers, JSON cache, and core API — live on surgut-go.apps.sielom.ru (completed 2026-06-27)
 - [ ] **Phase 2: Core Product UI & Mood Recommendations** - Mobile-first main page with 4 mood buttons, ranked event cards, dedup, date/price filters, and visible source status — core value delivered end-to-end
 - [ ] **Phase 3: Yellow Sources & Text Search** - Three cautiously-added YELLOW source adapters (afisha.ru, kassir.ru, Yandex Afisha disabled-by-default) and keyword search
 
@@ -38,7 +38,7 @@ Plans:
 - [x] 01-5-PLAN.md — Parallel scrape pipeline (error isolation, min-results, serve-stale) + cron refresh loop
 - [x] 01-6-PLAN.md — API routes: /api/events (filters + Ajv) and /api/sources/status
 - [x] 01-7-PLAN.md — kassa-ugra.ru + afisha.surguta.ru GREEN adapters (fixture-tested) + registry wiring
-- [ ] 01-8-PLAN.md — Quality gate + GitHub repo (push main) + operator /deploy to surgut-go.apps.sielom.ru
+- [x] 01-8-PLAN.md — Quality gate + GitHub repo (push main) + operator /deploy to surgut-go.apps.sielom.ru
 
 ### Phase 2: Core Product UI & Mood Recommendations
 **Goal**: A user on mobile taps one of four mood buttons and immediately sees ranked, honest event cards with a "Почему рекомендовано" label — the core value proposition is delivered end-to-end in the browser.
@@ -74,6 +74,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Deployable Pipeline & Green Sources | 7/8 | In Progress|  |
+| 1. Deployable Pipeline & Green Sources | 8/8 | Complete   | 2026-06-27 |
 | 2. Core Product UI & Mood Recommendations | 0/TBD | Not started | - |
 | 3. Yellow Sources & Text Search | 0/TBD | Not started | - |
